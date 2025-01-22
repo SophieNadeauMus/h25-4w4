@@ -57,19 +57,23 @@ p {
 /* //////////////////////////////
 Les composants
 ////////////////////////////// */
-.menu {
-  background-color: #aaa;
-}
-.menu ul {
+.entete__menu ul {
   margin: 0;
   padding: 0;
 }
-.menu ul li {
+.entete__menu ul li {
   display: inline-block;
 }
-.menu ul li a {
+.entete__menu ul li a {
   color: #333;
   text-decoration: none;
+}
+
+.entete__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
 }
 
 /* //////////////////////////////
