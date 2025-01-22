@@ -57,19 +57,24 @@ p {
 /* //////////////////////////////
 Les composants
 ////////////////////////////// */
-.menu {
-  background-color: #aaa;
-}
-.menu ul {
+.entete__menu ul {
   margin: 0;
   padding: 0;
 }
-.menu ul li {
+.entete__menu ul li {
   display: inline-block;
 }
-.menu ul li a {
+.entete__menu ul li a {
   color: #333;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.entete__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
 }
 
 /* //////////////////////////////
@@ -77,12 +82,17 @@ Les layouts
 ////////////////////////////// */
 .global {
   max-width: 1100px;
-  padding: 5vh 1vw;
+  padding: 10vh 5vw;
 }
 
 .entete {
   display: flex;
   justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.entete__logo {
+  margin: 0;
 }
 
 .hero {

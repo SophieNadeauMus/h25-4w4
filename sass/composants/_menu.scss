@@ -1,5 +1,4 @@
-.menu {
-  background-color: #aaa;
+.entete__menu {
   ul {
     margin: 0;
     padding: 0;
@@ -10,6 +9,7 @@
       a {
         color: #333;
         text-decoration: none;
+        text-transform: uppercase;
       }
     }
   }
