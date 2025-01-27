@@ -1,8 +1,10 @@
 .entete{
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
-}
-.entete__logo{
-  margin: 0;
+  align-items: center;
+  &__navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

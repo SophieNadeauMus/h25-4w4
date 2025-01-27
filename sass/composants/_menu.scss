@@ -1,16 +1,14 @@
-.entete__menu {
-  ul {
-    margin: 0;
-    padding: 0;
+/* --------------------------------- .menu */
+.menu{ //ul
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 10px 0;
+  &__li{ // li
 
-    li {
-      display: inline-block;
-
-      a {
-        color: #333;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
+    a{ // a
+      text-decoration: none;
+      padding: 4px;
     }
   }
 }
