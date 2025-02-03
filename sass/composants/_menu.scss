@@ -1,6 +1,7 @@
 /* --------------------------------- .menu */
 .menu{ //ul
   display: flex;
+  margin-right: 1rem;
   @media screen and (max-width: 800px){
   flex-direction: column;
   }
