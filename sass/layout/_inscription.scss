@@ -9,21 +9,24 @@
       display: flex;
       column-gap: 1rem;
 
+      input {
+        border: 2px solid rgb(142, 247, 247);
+        border-radius: 3px;
+        padding: 0.2rem;
+        width: 200px;
+        height: fit-content;
+        align-self: flex-end;
+        background-color: transparent;
+        font-size: 0.8rem;
+        
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
       &--champ {
         display: flex;
         flex-direction: column;
-
-        input {
-          padding: 0.5rem;
-          border: 2px solid rgb(142, 247, 247);
-          border-radius: 3px;
-          padding: 0.2rem;
-          
-          &::placeholder {
-            color: rgba(0, 0, 0, 0.3);
-            font-size: 0.8rem;
-          }
-        }
       }
     }
 }

@@ -12,7 +12,11 @@
 
     a{ // a
       text-decoration: none;
-      padding: 4px;
+      padding: 6px;
+      color: black;
+      &:hover{
+        color: rgb(3, 175, 201);
+      }
     }
   }
 }
