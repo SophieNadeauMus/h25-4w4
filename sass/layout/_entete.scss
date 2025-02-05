@@ -10,22 +10,42 @@
       width: 100px;
     }
   }
+
   &__navigation{
     @media screen and (max-width: 800px){
       position: absolute;
-      top: 0;
+      top: 100px;
       right: 0;
       background-color: #fff;
       padding: 20px;
       flex-direction: column; 
       width: 100vw;
+      display: none; //cacher le menu par défaut
     }
 
-    width: auto;
     position: static;
     display: flex;
     flex-direction: row;
     background-color: transparent;
     align-items: center;
   }
+
+  // Gestion du menu burger
+  #input--toggle{
+    display: none;
+  }
+
+  #input--toggle:checked ~ .entete__navigation{
+    display: flex;
+  }
+
+  .btn--toggle{
+    display: none;
+    @media screen and (max-width: 800px){
+      display: block;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+  
 }
