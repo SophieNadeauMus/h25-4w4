@@ -1,0 +1,22 @@
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  column-gap: 0.2rem;
+
+  &__titre {
+    grid-column: 1 / -1; // Permet de prendre toute la largeur
+    font-size: 1.2rem;
+  }
+
+  &__figure {
+    margin: 0;
+    .galerie__img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,36 @@
+.inscription {
+    // Formulaire d'inscription caché sur mobile
+    @media screen and (max-width: 800px){
+      display: none; 
+    }
+    width: fit-content;
+    margin-top: -2rem;
+    padding: 1rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    
+    &__form{
+      display: flex;
+      column-gap: 1rem;
+
+      input {
+        border: 2px solid rgb(142, 247, 247);
+        border-radius: 3px;
+        padding: 0.2rem;
+        width: 150px;
+        height: fit-content;
+        align-self: flex-end;
+        background-color: transparent;
+        font-size: 0.8rem;
+        
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &--champ {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+}

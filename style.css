@@ -24,6 +24,7 @@ Les balises de base
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -60,6 +61,8 @@ Les composants
 /* --------------------------------- .menu */
 .menu {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: 1rem;
   flex-direction: row;
   list-style-type: none;
   gap: 10px 0;
@@ -71,7 +74,11 @@ Les composants
 }
 .menu__li a {
   text-decoration: none;
-  padding: 4px;
+  padding: 6px;
+  color: black;
+}
+.menu__li a:hover {
+  color: rgb(3, 175, 201);
 }
 
 .recherche {
@@ -103,17 +110,24 @@ Les composants
 Les layouts
 ////////////////////////////// */
 .global {
-  max-width: 1100px;
-  padding: 10vh 5vw;
+  width: 96vw;
+  padding: 10vh 0;
+  margin: 0 auto;
 }
 
 .entete {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
+}
+.entete__logo {
+  margin: 0;
+}
+.entete__logo img {
+  width: 100px;
 }
 .entete__navigation {
-  width: auto;
   position: static;
   display: flex;
   flex-direction: row;
@@ -123,16 +137,105 @@ Les layouts
 @media screen and (max-width: 800px) {
   .entete__navigation {
     position: absolute;
-    top: 0;
+    top: 100px;
     right: 0;
     background-color: #fff;
     padding: 20px;
     flex-direction: column;
     width: 100vw;
+    display: none;
+  }
+}
+.entete #input--toggle {
+  display: none;
+}
+.entete #input--toggle:checked ~ .entete__navigation {
+  display: flex;
+}
+.entete .btn--toggle {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .entete .btn--toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  column-gap: 0.2rem;
+}
+.galerie__titre {
+  grid-column: 1/-1;
+  font-size: 1.2rem;
+}
+.galerie__figure {
+  margin: 0;
+}
+.galerie__figure .galerie__img {
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .galerie {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+  font-weight: bold;
+}
+.hero__titre {
+  text-shadow: 2px 2px 5px rgb(3, 175, 201);
+}
+.hero__description {
+  width: 40%;
+}
+.hero__bouton {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 2px solid rgb(142, 247, 247);
+  border-radius: 3px;
+  background-color: rgba(142, 247, 247, 0.7);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.inscription {
+  width: fit-content;
+  margin-top: -2rem;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+@media screen and (max-width: 800px) {
+  .inscription {
+    display: none;
+  }
+}
+.inscription__form {
+  display: flex;
+  column-gap: 1rem;
+}
+.inscription__form input {
+  border: 2px solid rgb(142, 247, 247);
+  border-radius: 3px;
+  padding: 0.2rem;
+  width: 150px;
+  height: fit-content;
+  align-self: flex-end;
+  background-color: transparent;
+  font-size: 0.8rem;
+}
+.inscription__form input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.inscription__form--champ {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,23 @@
 .hero{
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+  font-weight: bold;
+
+  &__titre {
+    text-shadow: 2px 2px 5px rgb(3, 175, 201);
+  }
+
+  &__description {
+    width: 40%;
+  }
+
+  &__bouton {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 2px solid rgb(142, 247, 247);
+    border-radius: 3px;
+    background-color: rgba(142,247,247,0.7);
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
 }
