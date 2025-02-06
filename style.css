@@ -1,19 +1,16 @@
 @charset "UTF-8";
 /*
-Theme Name: TP1 Sophie Nadeau
-Theme URI: https://wordpress.org/themes/twentytwenty/
+Theme Name: theme_4w4
+Theme URI: https://referenced.ca
 Author: Sophie Nadeau
 Author URI: https://github.com/SophieNadeauMus
-Description: Thème développé dans le cadre du cours 4w4
+Description: Thème de base développé dans le cadre du cours de Wordpress
 Version: 1.0
-Requires at least: 6.0
-Tested up to: 5.3
+Tested up to: 6.2
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: tp1-sn
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Text Domain: theme_4w4
 */
 /* //////////////////////////////
 Les variables
