@@ -20,37 +20,36 @@
         <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=000" width="32" height="32">
       </label>
       <div class="entete__navigation">
+        <?php wp_nav_menu(array(
+          'menu' => 'principal',
+          'container' => 'nav',
+          'container_class' => 'entete__menu'
+        )); ?>
         <nav class="entete__menu">
           <ul class="menu">
             <li class="menu__li">
               <a href="#">Aventure</a>
             </li>
             <li class="menu__li">
-              <a href="#">Culturel</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Zen</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Sportive</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Tourtereau</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Aventure</a>
+              <a href="#">Croisière</a>
             </li>
             <li class="menu__li">
               <a href="#">Culturel</a>
             </li>
             <li class="menu__li">
+              <a href="#">Économique</a>
+            </li>
+            <li class="menu__li">
+              <a href="#">Repos</a>
+            </li>
+            <li class="menu__li">
+              <a href="#">Sportif</a>
+            </li>
+            <li class="menu__li">
               <a href="#">Zen</a>
             </li>
             <li class="menu__li">
-              <a href="#">Sportive</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Tourtereau</a>
+              <a href="#">Pleine nature</a>
             </li>
           </ul>
         </nav>
