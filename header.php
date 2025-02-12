@@ -25,34 +25,6 @@
           'container' => 'nav',
           'container_class' => 'entete__menu'
         )); ?>
-        <nav class="entete__menu">
-          <ul class="menu">
-            <li class="menu__li">
-              <a href="#">Aventure</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Croisière</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Culturel</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Économique</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Repos</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Sportif</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Zen</a>
-            </li>
-            <li class="menu__li">
-              <a href="#">Pleine nature</a>
-            </li>
-          </ul>
-        </nav>
         <form class="recherche">
           <input type="search" placeholder="Rechercher" class="recherche__input">
           <img class="recherche__img" src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="16" height="16">

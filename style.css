@@ -72,12 +72,12 @@ Les composants
     flex-direction: column;
   }
 }
-.menu__li a {
+.menu-item a {
   text-decoration: none;
   padding: 6px;
   color: black;
 }
-.menu__li a:hover {
+.menu-item a:hover {
   color: rgb(3, 175, 201);
 }
 
@@ -118,7 +118,7 @@ Les composants
   width: 100%;
 }
 .carte__contenu {
-  background-color: rgb(61, 104, 79);
+  background-color: aquamarine;
 }
 /* //////////////////////////////
 Les layouts
