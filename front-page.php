@@ -92,7 +92,6 @@
       <?php endwhile; endif; ?>
     </div>
   </section>
-  <footer></footer>
   <?php get_footer(); ?>
 </body>
 </html>
