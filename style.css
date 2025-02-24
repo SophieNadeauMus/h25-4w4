@@ -107,9 +107,7 @@ Les composants
 }
 
 .carte {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 1rem;
 }
 .carte--grande {
   flex: 1 1 250px;
@@ -119,6 +117,11 @@ Les composants
 }
 .carte__contenu {
   background-color: aquamarine;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.carte__bouton {
+  text-decoration: none;
 }
 /* //////////////////////////////
 Les layouts
@@ -140,6 +143,7 @@ Les layouts
 }
 .entete__logo img {
   width: 100px;
+  height: 100px;
 }
 .entete__navigation {
   position: static;
@@ -201,6 +205,7 @@ Les layouts
 
 .hero {
   background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
   min-height: 100vh;
   font-weight: bold;
 }
@@ -252,6 +257,13 @@ Les layouts
 .inscription__form--champ {
   display: flex;
   flex-direction: column;
+}
+
+/* Section populaire contenant la galerie et les cartes de destinations populaires */
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* 

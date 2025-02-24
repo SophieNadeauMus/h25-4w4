@@ -46,7 +46,7 @@
       <input type="submit" value="S'INSCRIRE">
     </form>
   </section>
-  <section class="galerie">
+  <!-- <section class="galerie">
     <div class="galerie global">
       <h2 class="galerie__titre">Nos destinations favorites</h2>
       <figure class="galerie__figure">
@@ -80,7 +80,7 @@
         <img src="images/destination10.jpg" alt="destination de voyage 10" class="galerie__img">
       </figure>
     </div>
-  </section>
+  </section> -->
   <section class="populaire">
     <div class="global">
       <?php if (have_posts()) : while (have_posts()) : the_post();

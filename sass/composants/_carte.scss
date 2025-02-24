@@ -1,7 +1,8 @@
 .carte {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  padding: 1rem;
 
   &--grande{
     flex: 1 1 250px;
@@ -14,6 +15,8 @@
   }
   &__contenu {
     background-color: aquamarine;
+    padding: 1rem;
+    border-radius: 5px;
   }
   &__titre {
   
@@ -22,6 +25,7 @@
 
   }
   &__bouton {
+    text-decoration: none;
 
     &--actif {
 
