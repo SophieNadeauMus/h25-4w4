@@ -1,5 +1,11 @@
 .global{
-  width: 96vw;
+  width: 90vw;
   padding: 10vh 0;
   margin: 0 auto;
+}
+
+/* Section populaire contenant la galerie et les cartes de destinations populaires */
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
 }

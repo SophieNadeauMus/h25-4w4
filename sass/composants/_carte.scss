@@ -1,8 +1,5 @@
 .carte {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  padding: 1rem;
+  margin: 1rem;
 
   &--grande{
     flex: 1 1 250px;
@@ -14,19 +11,29 @@
     }
   }
   &__contenu {
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(210, 255, 255);
     padding: 1rem;
     border-radius: 5px;
+    &--entete {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
   }
   &__titre {
-  
+    margin: 0;
+  }
+  &__categorie {
+    margin: 0;
   }
   &__description {
 
   }
   &__bouton {
     text-decoration: none;
-
     &--actif {
 
     }

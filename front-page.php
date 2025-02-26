@@ -46,45 +46,10 @@
       <input type="submit" value="S'INSCRIRE">
     </form>
   </section>
-  <!-- <section class="galerie">
-    <div class="galerie global">
-      <h2 class="galerie__titre">Nos destinations favorites</h2>
-      <figure class="galerie__figure">
-        <img src="images/destination1.jpg" alt="destination de voyage 1" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination2.jpg" alt="destination de voyage 2" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination3.jpg" alt="destination de voyage 3" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination4.jpg" alt="destination de voyage 4" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination5.jpg" alt="destination de voyage 5" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination6.jpg" alt="destination de voyage 6" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination7.jpg" alt="destination de voyage 7" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination8.jpg" alt="destination de voyage 8" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination9.jpg" alt="destination de voyage 9" class="galerie__img">
-      </figure>
-      <figure class="galerie__figure">
-        <img src="images/destination10.jpg" alt="destination de voyage 10" class="galerie__img">
-      </figure>
-    </div>
-  </section> -->
   <section class="populaire">
     <div class="global">
       <?php if (have_posts()) : while (have_posts()) : the_post();
-        if(in_category('galerie')) {
+        if(in_category("galerie")) {
           the_content();
         } else { ?>
         <?php get_template_part( 'gabarits/carte' ); ?>

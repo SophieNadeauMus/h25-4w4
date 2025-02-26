@@ -107,7 +107,7 @@ Les composants
 }
 
 .carte {
-  padding: 1rem;
+  margin: 1rem;
 }
 .carte--grande {
   flex: 1 1 250px;
@@ -116,9 +116,23 @@ Les composants
   width: 100%;
 }
 .carte__contenu {
-  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(210, 255, 255);
   padding: 1rem;
   border-radius: 5px;
+}
+.carte__contenu--entete {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.carte__titre {
+  margin: 0;
+}
+.carte__categorie {
+  margin: 0;
 }
 .carte__bouton {
   text-decoration: none;
@@ -127,9 +141,15 @@ Les composants
 Les layouts
 ////////////////////////////// */
 .global {
-  width: 96vw;
+  width: 90vw;
   padding: 10vh 0;
   margin: 0 auto;
+}
+
+/* Section populaire contenant la galerie et les cartes de destinations populaires */
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .entete {
@@ -142,8 +162,8 @@ Les layouts
   margin: 0;
 }
 .entete__logo img {
-  width: 100px;
-  height: 100px;
+  width: clamp(75px, 15vw, 130px);
+  height: auto;
 }
 .entete__navigation {
   position: static;
@@ -178,28 +198,6 @@ Les layouts
     display: block;
     cursor: pointer;
     z-index: 10;
-  }
-}
-
-.galerie {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  column-gap: 0.2rem;
-}
-.galerie__titre {
-  grid-column: 1/-1;
-  font-size: 1.2rem;
-}
-.galerie__figure {
-  margin: 0;
-}
-.galerie__figure .galerie__img {
-  width: 100%;
-}
-@media screen and (max-width: 800px) {
-  .galerie {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -259,13 +257,6 @@ Les layouts
   flex-direction: column;
 }
 
-/* Section populaire contenant la galerie et les cartes de destinations populaires */
-.populaire .global {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 /* 
   --------------------------------------------------------Layout du pied de page
 */
@@ -295,4 +286,9 @@ footer {
 }
 .piedpage__s1__description {
   flex: 1 0 400px;
+}
+
+.categorie__entete {
+  width: 90vw;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
