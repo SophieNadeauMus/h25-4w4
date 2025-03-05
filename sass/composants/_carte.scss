@@ -1,5 +1,7 @@
+// Gabarit de carte des destinations
 .carte {
   margin: 1rem;
+  display: flex;
 
   &--grande{
     flex: 1 1 250px;
@@ -14,20 +16,36 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(210, 255, 255);
     padding: 1rem;
-    border-radius: 5px;
-    &--entete {
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+
+    // Liens vers les pages de catégories
+    .post-categories {
       display: flex;
-      flex-direction: column;
-      margin: 1rem 0;
+      list-style-type: none;
+      padding-left: 0;
+      gap: 1rem;
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+          padding: 0.5rem;
+          border-radius: 5px;
+          background-color: rgb(238, 216, 188);
+        }
+        a:hover {
+          color: white;
+          background-color: rgb(237, 175, 94);
+        }
+      }
     }
   }
   &__titre {
-    margin: 0;
-  }
-  &__categorie {
-    margin: 0;
+    width: fit-content;
   }
   &__description {
 
@@ -35,7 +53,6 @@
   &__bouton {
     text-decoration: none;
     &--actif {
-
     }
   }
 }

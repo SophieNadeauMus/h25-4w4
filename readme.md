@@ -1,6 +1,6 @@
-# Exercice #1
-## Concevoir une page d'accueil en HTML/CSS à partir d'une maquette
+# TP1
+## Concevoir un site Wordpress pour un club de voyage
 ### Auteur: Sophie Nadeau
-La réalisation de ce prototype représente une première étape pour la conception d'un thème Wordpress.
+La réalisation de ce thème permet la personnalisation d'un site de voyage
 
-#### Github-page : https://sophienadeaumus.github.io/h25-4w4/
+#### Site hébergé sur WHC : https://gftnth00.mywhc.ca/4w4_01/

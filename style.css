@@ -108,6 +108,7 @@ Les composants
 
 .carte {
   margin: 1rem;
+  display: flex;
 }
 .carte--grande {
   flex: 1 1 250px;
@@ -119,24 +120,41 @@ Les composants
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   background-color: rgb(210, 255, 255);
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
 }
-.carte__contenu--entete {
+.carte__contenu .post-categories {
   display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
+  list-style-type: none;
+  padding-left: 0;
+  gap: 1rem;
+}
+.carte__contenu .post-categories li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: rgb(238, 216, 188);
+}
+.carte__contenu .post-categories li a:hover {
+  color: white;
+  background-color: rgb(237, 175, 94);
 }
 .carte__titre {
-  margin: 0;
-}
-.carte__categorie {
-  margin: 0;
+  width: fit-content;
 }
 .carte__bouton {
   text-decoration: none;
 }
+/* Icones des résaux sociaux */
+.icone__sociaux a {
+  text-decoration: none;
+}
+
 /* //////////////////////////////
 Les layouts
 ////////////////////////////// */
@@ -286,6 +304,12 @@ footer {
 }
 .piedpage__s1__description {
   flex: 1 0 400px;
+}
+.piedpage__s2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .categorie__entete {
