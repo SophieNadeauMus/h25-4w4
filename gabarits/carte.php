@@ -13,7 +13,6 @@
       the_post_thumbnail('thumbnail'); }; 
     ?>
     <h4 class="carte__titre"><?php the_title(); ?></h4>
-    <?php the_category(); ?>
     <p class="carte__description"><?php echo wp_trim_words(get_the_content(),10, " ... " ); ?></p>
     <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink(); ?>">suite...</a>
     <p>Température maximum: <?php the_field('temperature_maximum') ?>&#176;C</p>

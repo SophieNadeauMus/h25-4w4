@@ -5,6 +5,7 @@
 footer {
   background-color: bisque;
   color: #000;
+  padding: 2rem;
 }
 
 .piedpage{
@@ -15,17 +16,26 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+
     &__externe {
       flex: 0 0 20%;
+      nav {
+        
+      }
       & .menu { // ul menu wp
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 0;
       }
     }
     &__adresse{
       flex: 0 0 40%;
-      &__coord {}
-      &__recherche {}
+      &__coord {
+      }
+      &__recherche {
+        line-height: 4rem;
+      }
     }
     &__description {
       flex: 1 0 400px;

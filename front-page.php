@@ -1,5 +1,9 @@
   <?php get_header(); ?>
-  <section class="hero">
+  <?php 
+    $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
+    $hero_background = get_theme_mod('hero_background', '');
+  ?>
+  <section class="hero" style="background-image: url(<?php echo $hero_background ?>)">
     <div class="hero__contenu global">
       <h1 class="hero__titre">Club de voyage</h1>
       <p class="hero__description">
@@ -14,38 +18,16 @@
       <p class="hero__telephone">
         514 254-7131
       </p>
+      <p class="hero__auteur">Auteur : <?= $hero_auteur; ?></p>
       <button class="hero__bouton">
         S'INSCRIRE
       </button>
       <div class="hero__icone">
-        <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-        <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-        <img src="https://s2.svgbox.net/social.svg?ic=wordpress&color=000000" width="20" height="20">
-        <img src="https://s2.svgbox.net/social.svg?ic=snapchat&color=000000" width="20" height="20">
+        <?php get_template_part('gabarits/icone-sociaux'); ?>
       </div>
     </div>
   </section>
-  <section class="inscription global">
-    <form class="inscription__form" action="">
-      <div class="inscription__form--champ">
-        <label for="nom">Nom</label>
-      <input type="text" id="nom" name="nom" placeholder="Écrivez votre nom">
-      </div>
-      <div class="inscription__form--champ">
-        <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom" placeholder="Écrivez votre prénom">
-      </div>
-      <div class="inscription__form--champ">
-        <label for="courriel">Courriel</label>
-        <input type="text" id="courriel" name="courriel" placeholder="Écrivez votre courriel">
-      </div>
-      <div class="inscription__form--champ">
-        <label for="telephone">Téléphone</label>
-        <input type="text" id="telephone" name="telephone" placeholder="Écrivez votre téléphone">
-      </div>
-      <input type="submit" value="S'INSCRIRE">
-    </form>
-  </section>
+  <?php get_template_part('gabarits/inscription'); ?>
   <section class="populaire">
     <div class="global">
       <?php if (have_posts()) : while (have_posts()) : the_post();

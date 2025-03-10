@@ -2,3 +2,25 @@
   width: 90vw;
   margin: 0 auto;
 }
+
+ // Liens des catégories
+ .post-categories {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  li {
+    a {
+      text-decoration: none;
+      color: black;
+      padding: 0.5rem;
+      border-radius: 5px;
+      background-color: rgb(238, 216, 188);
+    }
+    a:hover {
+      color: white;
+      background-color: rgb(237, 175, 94);
+    }
+  }
+}

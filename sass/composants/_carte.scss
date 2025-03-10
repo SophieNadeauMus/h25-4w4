@@ -22,27 +22,6 @@
     border-radius: 10px;
     text-align: center;
     flex: 1;
-
-    // Liens vers les pages de catégories
-    .post-categories {
-      display: flex;
-      list-style-type: none;
-      padding-left: 0;
-      gap: 1rem;
-      li {
-        a {
-          text-decoration: none;
-          color: black;
-          padding: 0.5rem;
-          border-radius: 5px;
-          background-color: rgb(238, 216, 188);
-        }
-        a:hover {
-          color: white;
-          background-color: rgb(237, 175, 94);
-        }
-      }
-    }
   }
   &__titre {
     width: fit-content;
@@ -53,6 +32,14 @@
   &__bouton {
     text-decoration: none;
     &--actif {
+      background-color: rgb(255, 217, 147);
+      color: black;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+    &--actif:hover {
+      background-color: orange;
+      color: white;
     }
   }
 }

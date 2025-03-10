@@ -8,6 +8,7 @@
             the_post_thumbnail('large'); }; 
           ?>
           <h2><?php the_title(); ?></h2>
+          <?php the_category(); ?>
           <div><?php the_content(); ?></div>
           <p>Température maximum: <?php the_field('temperature_maximum') ?>&#176;C</p>
           <p>Température minimum: <?php the_field('temperature_minimum') ?>&#176;C</p>
