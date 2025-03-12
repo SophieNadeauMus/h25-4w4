@@ -4,7 +4,7 @@
   font-weight: bold;
 
   &__titre {
-    text-shadow: 2px 2px 5px rgb(3, 175, 201);
+    text-shadow: 2px 2px 5px $couleur__secondaire;
   }
 
   &__description {
@@ -14,7 +14,7 @@
   &__bouton {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    border: 2px solid rgb(142, 247, 247);
+    border: 2px solid $couleur__secondaire;
     border-radius: 3px;
     background-color: rgba(142,247,247,0.7);
     font-weight: bold;

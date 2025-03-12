@@ -84,7 +84,7 @@
     $wp_customize->add_control('footer_adresse', array(
       'label' => __('Adresse', 'theme_4w4'),
       'section' => 'footer_section',
-      'type' => 'text',
+      'type' => 'textarea',
     ));
     /////////////////////////////////////////////////// début du champ footer_telephone
     // Ajout du numéro de téléphone
