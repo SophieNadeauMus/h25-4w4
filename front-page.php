@@ -1,16 +1,20 @@
   <?php get_header(); ?>
   <?php 
+    $hero_courriel = get_theme_mod('hero_courriel', '');
+    $hero_couleur = get_theme_mod('hero_couleur', '');
     $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
     $hero_background = get_theme_mod('hero_background', '');
   ?>
-  <section class="hero" style="background-image: url(<?php echo $hero_background ?>)">
+  <section class="hero" style="background-image: url(<?= $hero_background ?>) ; color: <?= $hero_couleur; ?>">
     <div class="hero__contenu global">
       <h1 class="hero__titre">Club de voyage</h1>
       <p class="hero__description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, molestias! Maxime quam consequatur facere tempora, nobis culpa blanditiis esse dolor eius veritatis, recusandae suscipit voluptatum est, aliquid tempore voluptatem voluptatibus.
       </p>
       <p class="hero__courriel">
-        <a href="#">info@cmaisonneuve.qc.ca</a>
+        <a href="#">
+          <?= $hero_courriel; ?>
+        </a>
       </p>
       <p class="hero__adresse">
         3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2
