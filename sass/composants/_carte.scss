@@ -2,9 +2,13 @@
 .carte {
   margin: 1rem;
   display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
 
   &--grande{
     flex: 1 1 250px;
+    max-width: 350px;
   }
   &__image {
 

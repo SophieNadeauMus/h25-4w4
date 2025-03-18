@@ -1,6 +1,6 @@
 .global{
   width: 90vw;
-  padding: 10vh 0;
+  padding: 5vh 0;
   margin: 0 auto;
 }
 
@@ -9,3 +9,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+// Lorsque le menu sur mobile est ouvert, on veut que le body soit en overflow hidden
+// pour empêcher le scroll
+body:has(#input--toggle:checked) {
+  overflow: hidden;
+  height: 100vh;
+}
+
