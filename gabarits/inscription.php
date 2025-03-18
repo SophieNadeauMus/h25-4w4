@@ -17,6 +17,6 @@
       <label for="telephone">Téléphone</label>
       <input type="text" id="telephone" name="telephone" placeholder="Écrivez votre téléphone">
     </div>
-    <input type="submit" value="S'INSCRIRE">
+    <button type="submit">S'INSCRIRE</button>
    </form>
 </section>

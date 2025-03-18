@@ -12,19 +12,35 @@
     &__form{
       display: flex;
       column-gap: 1rem;
+      width: fit-content;
 
-      input {
+      input, button {
+        font-size: 0.8rem;
         border: 2px solid $couleur__secondaire;
         border-radius: 3px;
-        padding: 0.2rem;
-        width: 150px;
         height: fit-content;
         align-self: flex-end;
+      }
+
+      input {
+        padding: 0.2rem;
+        width: clamp(8rem, 15vw, 15rem);
         background-color: transparent;
-        font-size: 0.8rem;
         
         &::placeholder {
           color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      button {
+        background-color: $couleur__secondaire;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($couleur__secondaire, 10%);
+          border: 2px solid darken($couleur__secondaire, 10%);
         }
       }
 

@@ -280,19 +280,32 @@ body:has(#input--toggle:checked) {
 .inscription__form {
   display: flex;
   column-gap: 1rem;
+  width: fit-content;
 }
-.inscription__form input {
+.inscription__form input, .inscription__form button {
+  font-size: 0.8rem;
   border: 2px solid #58c0c9;
   border-radius: 3px;
-  padding: 0.2rem;
-  width: 150px;
   height: fit-content;
   align-self: flex-end;
+}
+.inscription__form input {
+  padding: 0.2rem;
+  width: clamp(8rem, 15vw, 15rem);
   background-color: transparent;
-  font-size: 0.8rem;
 }
 .inscription__form input::placeholder {
   color: rgba(0, 0, 0, 0.3);
+}
+.inscription__form button {
+  background-color: #58c0c9;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+.inscription__form button:hover {
+  background-color: #3aaab4;
+  border: 2px solid #3aaab4;
 }
 .inscription__form--champ {
   display: flex;
