@@ -5,23 +5,25 @@
 footer {
   background-color: $couleur__accent--clair;
   color: #000;
-  padding: 2rem;
+  padding: clamp(1rem, 5%, 2rem);
 }
 
 .piedpage{
   display: flex;
   flex-direction: column;
+  row-gap: 2rem;
   
   &__s1 {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    justify-content: space-between; 
+    align-items: flex-start;
+    column-gap: 2rem;
+    row-gap: 1rem;
 
     &__externe {
       flex: 0 0 20%;
-      nav {
-        
-      }
+      
       & .menu { // ul menu wp
         display: flex;
         flex-direction: column;
@@ -31,20 +33,38 @@ footer {
     }
     &__adresse{
       flex: 0 0 40%;
+
       &__coord {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+
+        p {
+          margin: 0;
+        }
       }
       &__recherche {
+        margin-top: 1rem;
         line-height: 4rem;
       }
     }
     &__description {
-      flex: 1 0 400px;
+      flex: 1 0 clamp(250px, 40%, 400px);
     }
   }
   &__s2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+
+    &__principal {
+
+      & .menu {
+        flex-direction: row;
+        padding-left: 0;
+        column-gap: 0.5rem;
+        a{
+          margin-left: 0;
+        }
+      }
+    }
   }
 }

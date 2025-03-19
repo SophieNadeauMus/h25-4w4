@@ -1,7 +1,8 @@
 <?php 
   $footer_mission = get_theme_mod('footer_mission', 'Notre mission');
-  $footer_adresse = get_theme_mod('footer_adresse', ''); 
-  $footer_telephone = get_theme_mod('footer_telephone', ''); 
+  $coord_adresse = get_theme_mod('coord_adresse', ''); 
+  $coord_telephone = get_theme_mod('coord_telephone', '');
+  $coord_courriel = get_theme_mod('coord_courriel', ''); 
 ?>
 <footer>
   <div class="piedpage">
@@ -16,10 +17,9 @@
       <div class="piedpage__s1__adresse">
         <h5>Coordonnées</h5>
         <div class="piedpage__s1__adresse__coord">
-          <?= 
-            $footer_adresse . "<br>" .
-            $footer_telephone
-          ?>
+          <p><?= $coord_adresse ?></p>
+          <p><?= $coord_telephone ?></p>
+          <p><?= $coord_courriel ?></p>  
         </div>
         <div class="piedpage__s1__adresse__recherche">
           <?php get_search_form(); ?>
@@ -27,13 +27,10 @@
       </div>
       <div class="piedpage__s1__description">
         <h5>Mission du club</h5>
-        <?= $footer_mission; ?>
+        <p><?= $footer_mission; ?></p>
       </div>
     </section>
     <section class="piedpage__s2">
-      <div class="piedpage__s2__sociaux">
-        <?php get_template_part('gabarits/icone-sociaux'); ?>
-      </div>
       <div class="piedpage__s2__principal">
         <?php wp_nav_menu(array(
           "menu" => "principal",
@@ -41,7 +38,11 @@
         )); ?>
       </div>
     </section>
-    <section class="piedpage__s3"></section>
+    <section class="piedpage__s3">
+      <div class="piedpage__s3__sociaux">
+        <?php get_template_part('gabarits/icone-sociaux'); ?>
+      </div>
+    </section>
   </div>
 </footer>
 <?php wp_footer() ?>

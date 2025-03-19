@@ -2,25 +2,56 @@
 <?php
   function theme_4w4_customize_register($wp_customize) {
     // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
-    //////////////////////////////////////////////////// DÉBUT DE LA ZONE HERO
+    //////////////////////////////////////////////////// DÉBUT DE LA ZONE DE COORDONNÉES
     // Création d'une nouvelle section dans le customizer
+    $wp_customize->add_section('coord_section', array(
+      'title' => __('Coordonnées', 'theme_4w4'),
+      'priority' => 30,
+    ));
+
+    /////////////////////////////////////////////////// début du champ coord_courriel
+    // Ajout de l'adresse courriel
+    $wp_customize->add_setting('coord_courriel', array(
+      'default' => __('info@cmaisonneuve.qc.ca', 'theme_4w4'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    // Ajout du contrôle de l'adresse courriel
+    $wp_customize->add_control('coord_courriel', array(
+      'label' => __('Adresse courriel', 'theme_4w4'),
+      'section' => 'coord_section',
+      'type' => 'text',
+    ));
+    /////////////////////////////////////////////////// début du champ coord_adresse
+    // Ajout de l'adresse
+    $wp_customize->add_setting('coord_adresse', array(
+      'default' => __('3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2', 'theme_4w4'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    // Ajout du contrôle de l'adresse
+    $wp_customize->add_control('coord_adresse', array(
+      'label' => __('Adresse', 'theme_4w4'),
+      'section' => 'coord_section',
+      'type' => 'textarea',
+    ));
+    /////////////////////////////////////////////////// début du champ coord_telephone
+    // Ajout du numéro de téléphone
+    $wp_customize->add_setting('coord_telephone', array(
+      'default' => __('514 254-7131', 'theme_4w4'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    // Ajout du contrôle du numéro de téléphone
+    $wp_customize->add_control('coord_telephone', array(
+      'label' => __('Téléphone', 'theme_4w4'),
+      'section' => 'coord_section',
+      'type' => 'text',
+    ));
+
+    //////////////////////////////////////////////////// DÉBUT DE LA ZONE HERO
     $wp_customize->add_section('hero_section', array(
       'title' => __('Section hero', 'theme_4w4'),
       'priority' => 30,
     ));
 
-    /////////////////////////////////////////////////// début du champ hero_courriel
-    // Ajout de l'adresse courriel
-    $wp_customize->add_setting('hero_courriel', array(
-      'default' => __('info@cmaisonneuve.qc.ca', 'theme_4w4'),
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    // Ajout du contrôle de l'adresse courriel
-    $wp_customize->add_control('hero_courriel', array(
-      'label' => __('Adresse courriel', 'theme_4w4'),
-      'section' => 'hero_section',
-      'type' => 'text',
-    ));
     /////////////////////////////////////////////////// début du champ hero_couleur
     // Ajout de la couleur du texte
     $wp_customize->add_setting('hero_couleur', array(
@@ -72,31 +103,7 @@
     $wp_customize->add_control('footer_mission', array(
       'label' => __('Mission', 'theme_4w4'),
       'section' => 'footer_section',
-      'type' => 'text',
-    ));
-    /////////////////////////////////////////////////// début du champ footer_adresse
-    // Ajout de l'adresse
-    $wp_customize->add_setting('footer_adresse', array(
-      'default' => __('3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2', 'theme_4w4'),
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    // Ajout du contrôle de l'adresse
-    $wp_customize->add_control('footer_adresse', array(
-      'label' => __('Adresse', 'theme_4w4'),
-      'section' => 'footer_section',
       'type' => 'textarea',
-    ));
-    /////////////////////////////////////////////////// début du champ footer_telephone
-    // Ajout du numéro de téléphone
-    $wp_customize->add_setting('footer_telephone', array(
-      'default' => __('514 254-7131', 'theme_4w4'),
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    // Ajout du contrôle du numéro de téléphone
-    $wp_customize->add_control('footer_telephone', array(
-      'label' => __('Téléphone', 'theme_4w4'),
-      'section' => 'footer_section',
-      'type' => 'text',
     ));
   }
 

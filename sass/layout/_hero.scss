@@ -4,7 +4,7 @@
   font-weight: bold;
 
   &__titre {
-    text-shadow: 2px 2px 5px $couleur__secondaire;
+    text-shadow: 2px 2px 5px $couleur__tertiaire;
   }
 
   &__description {
@@ -13,11 +13,17 @@
 
   &__bouton {
     margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 2px solid $couleur__secondaire;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid $couleur__primaire;
     border-radius: 3px;
-    background-color: rgba(142,247,247,0.7);
+    background-color: $couleur__primaire;
     font-weight: bold;
     font-size: 0.8rem;
+
+    &:hover {
+      background-color: darken($couleur__primaire, 10%);
+      border: 2px solid darken($couleur__primaire, 10%);
+      cursor: pointer;
+    }
   }
 }
