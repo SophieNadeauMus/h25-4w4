@@ -1,4 +1,3 @@
-<!-- L'ensemble des options du thème personnalisé -->
 <?php
   function mon_theme_supports() {
     add_theme_support('title-tag');
@@ -37,4 +36,3 @@
       }
     }
     add_action( 'pre_get_posts', 'modifie_requete_principal' );
-?>
