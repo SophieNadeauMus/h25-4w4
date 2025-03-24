@@ -153,15 +153,12 @@ Les composants
   flex: 1 1 250px;
   max-width: 350px;
 }
-.carte__image img {
-  width: 100%;
-}
 .carte__contenu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   background-color: #dffdff;
   border: 1px solid #48a1a9;
   border-radius: 10px;
