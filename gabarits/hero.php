@@ -1,5 +1,6 @@
 <!-- Section hero contenant les infos du site et l'image d'arrière-plan -->
 <?php 
+    $coord_description = get_theme_mod('coord_description', '');
     $coord_courriel = get_theme_mod('coord_courriel', '');
     $coord_adresse = get_theme_mod('coord_adresse', '');
     $coord_telephone = get_theme_mod('coord_telephone', '');
@@ -11,7 +12,8 @@
   <div class="hero__contenu global">
     <h1 class="hero__titre">Club de voyage</h1>
     <p class="hero__description">
-    Mondo voyage est votre destination en ligne idéale pour planifier et réserver tous vos voyages. Que vous soyez à la recherche de vacances reposantes sur une plage tropicale, d'une aventure en montagne ou d'une escapade culturelle, notre site vous offre tout ce dont vous avez besoin pour faire de votre prochain voyage une expérience inoubliable.    </p>
+      <?= $coord_description; ?>
+    </p>
     <p class="hero__courriel">
       <a href="#">
         <?= $coord_courriel; ?>

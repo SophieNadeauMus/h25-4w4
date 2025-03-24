@@ -44,6 +44,18 @@
       'section' => 'coord_section',
       'type' => 'text',
     ));
+    /////////////////////////////////////////////////// début du champ coord_description
+    // Ajout de la description
+    $wp_customize->add_setting('coord_description', array(
+      'default' => __('Description du site Web', 'theme_4w4'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    // Ajout du contrôle de la description du site
+    $wp_customize->add_control('coord_description', array(
+      'label' => __('Description', 'theme_4w4'),
+      'section' => 'coord_section',
+      'type' => 'textarea',
+    ));
 
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE HERO
     $wp_customize->add_section('hero_section', array(

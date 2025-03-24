@@ -1,3 +1,21 @@
-.erreur__principal {
+.erreur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   
+  &__contenu {
+    
+    & h1 {
+      margin: 0;
+    }
+  }
+
+  &__nav {
+    
+    & .menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

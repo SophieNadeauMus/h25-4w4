@@ -445,4 +445,18 @@ footer {
 }
 .recherche__section article hr {
   border: none;
+}
+
+.erreur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.erreur__contenu h1 {
+  margin: 0;
+}
+.erreur__nav .menu {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
