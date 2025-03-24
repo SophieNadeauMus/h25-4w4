@@ -2,20 +2,36 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  width: 60vw;
+  margin: 5vh auto;
+  row-gap: 2rem;
   
   &__contenu {
-    
     & h1 {
       margin: 0;
     }
   }
 
   &__nav {
+
+    & p {
+      font-weight: bold;
+    }
     
     & .menu {
       display: flex;
       flex-direction: column;
+      padding-left: 0;
+    }
+  }
+
+  &__description {
+    background-color: $couleur__primaire;
+    padding: 1rem;
+    border-radius: 10px;
+    
+    & h6 {
+      margin: 0;
     }
   }
 }

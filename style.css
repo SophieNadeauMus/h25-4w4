@@ -23,7 +23,7 @@ Les balises de base
 ////////////////////////////// */
 body {
   font-size: 16px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   overflow-x: hidden;
 }
 
@@ -451,12 +451,26 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  width: 60vw;
+  margin: 5vh auto;
+  row-gap: 2rem;
 }
 .erreur__contenu h1 {
   margin: 0;
 }
+.erreur__nav p {
+  font-weight: bold;
+}
 .erreur__nav .menu {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+}
+.erreur__description {
+  background-color: #dffdff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.erreur__description h6 {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
