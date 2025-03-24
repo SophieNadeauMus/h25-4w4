@@ -452,7 +452,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   width: 60vw;
-  margin: 5vh auto;
+  margin: 10vh auto;
   row-gap: 2rem;
 }
 .erreur__contenu h1 {
