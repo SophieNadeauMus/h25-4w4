@@ -1,4 +1,4 @@
-# TP2
+# Examen intra - Création du modèle 404.php 
 ## Concevoir un site Wordpress pour un club de voyage
 ### Auteur: Sophie Nadeau
 La réalisation de ce thème permet la personnalisation d'un site de voyage

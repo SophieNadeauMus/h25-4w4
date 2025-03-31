@@ -116,6 +116,58 @@
       'section' => 'footer_section',
       'type' => 'textarea',
     ));
+    //////////////////////////////////////////////////// DÉBUT DE LA ZONE ERREUR 404
+    $wp_customize->add_section('section_404', array(
+      'title' => __('Erreur 404', 'theme_4w4'),
+      'priority' => 30,
+    ));
+
+    /////////////////////////////////////////////////// début du champ background_404
+    // Ajout de l'image d'arrière-plan
+    $wp_customize->add_setting('background_404', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    // Ajout du contrôle de l'image d'arrière-plan
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
+        'label' => __('Image en arrière-plan', 'theme_4w4'),
+        'section' => 'section_404',
+    )));
+    /////////////////////////////////////////////////// début du champ couleur_404
+    // Ajout de la couleur du texte
+    $wp_customize->add_setting('couleur_404', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    // Ajout du contrôle de la couleur du texte
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'couleur_404', array(
+        'label' => __('Couleur du texte', 'theme_4w4'),
+        'section' => 'section_404',
+    )));
+    /////////////////////////////////////////////////// début du champ titre_404
+    // Ajout du titre
+    $wp_customize->add_setting('titre_404', array(
+      'default' => __('Erreur 404', 'theme_4w4'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    // Ajout du contrôle du titre
+    $wp_customize->add_control('titre_404', array(
+      'label' => __('Titre', 'theme_4w4'),
+      'section' => 'section_404',
+      'type' => 'text',
+    ));
+    /////////////////////////////////////////////////// début du champ message_404
+    // Ajout du message
+    $wp_customize->add_setting('message_404', array(
+      'default' => __('La page que vous recherchez n\'existe pas.', 'theme_4w4'),
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    // Ajout du contrôle du message
+    $wp_customize->add_control('message_404', array(
+      'label' => __('Message', 'theme_4w4'),
+      'section' => 'section_404',
+      'type' => 'textarea',
+    ));
   }
 
   add_action('customize_register', 'theme_4w4_customize_register');
