@@ -9,19 +9,15 @@
 <?php get_header(); ?>
 <section class="erreur" style="background-image: url(<?= $background_404 ?>) ; color: <?= $couleur_404; ?>">
   <div class="erreur__contenu">
-    <h1><?= $titre_404; ?></h1>
-    <h5>La page que vous cherchez n'existe pas.</h5>
+    <h1 class="erreur__titre"><?= $titre_404; ?></h1>
+    <p class="erreur__message"><?= $message_404 ?></p>
     <div class="erreur__nav">
     <p>Voici quelques liens utiles pour vous aider: </p>
     <?php wp_nav_menu(array(
       'menu' => 'erreur',
       'container' => false,
-    )); ?>
-  </div>
-  </div>
-  <div class="erreur__description">
-    <h6>À propos de notre site</h6>
-    <p><?= $coord_description; ?></p>
+      )); ?>
+    </div>
   </div>
 </section>
 <?php get_footer(); ?>

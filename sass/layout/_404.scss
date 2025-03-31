@@ -1,15 +1,29 @@
 .erreur {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 60vw;
-  margin: 10vh auto;
-  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10vh 0;
+  background-position: center;
+  background-repeat: no-repeat;
   
   &__contenu {
-    & h1 {
-      margin: 0;
-    }
+    row-gap: 2rem;
+    max-width: 60vw;
+    text-align: center;
+  }
+
+  &__titre {
+    padding: 0.8rem;
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &__message {
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   &__nav {
@@ -20,18 +34,9 @@
     
     & .menu {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       padding-left: 0;
-    }
-  }
-
-  &__description {
-    background-color: $couleur__primaire;
-    padding: 1rem;
-    border-radius: 10px;
-    
-    & h6 {
-      margin: 0;
     }
   }
 }
