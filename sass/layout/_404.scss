@@ -10,7 +10,6 @@
   background-repeat: no-repeat;
   
   &__contenu {
-    row-gap: 2rem;
     max-width: 60vw;
     text-align: center;
   }
@@ -22,24 +21,29 @@
   }
 
   &__message {
+    margin-bottom: 2rem;
     padding: 0.8rem;
+    font-weight: bold;
     background-color: rgba(255, 255, 255, 0.2);
   }
 
   &__btn {
-    border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(135, 211, 236);
+    color: $couleur__secondaire;
+    text-decoration: none;
+    transition: filter 0.2s;
 
     &:hover {
       cursor: pointer;
+      filter: brightness(0.8);
     }
   }
 
   &__nav {
+    margin-top: 2rem;
 
     & .menu {
       display: flex;
@@ -52,11 +56,11 @@
           width: fit-content;
           padding: 0.5rem;
           border-radius: 5px;
-          background-color: rgb(135, 211, 236);
+          background-color: rgba($couleur__primaire, 0.7);
           transition: background-color 0.2s;
 
           &:hover {
-            background-color: rgb(33, 179, 228);
+            background-color: rgba($couleur__secondaire, 0.7);
           }
 
           // Pour annuler le style par défaut des menus
