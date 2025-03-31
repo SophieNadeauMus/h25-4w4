@@ -11,8 +11,8 @@
   <div class="erreur__contenu">
     <h1 class="erreur__titre"><?= $titre_404; ?></h1>
     <p class="erreur__message"><?= $message_404 ?></p>
+    <button class="erreur__btn" type="submit" style="background-color: <?= $couleur_404; ?>">Retour à l'accueil</button>
     <div class="erreur__nav">
-    <p>Voici quelques liens utiles pour vous aider: </p>
     <?php wp_nav_menu(array(
       'menu' => 'erreur',
       'container' => false,

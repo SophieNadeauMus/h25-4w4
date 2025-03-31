@@ -26,17 +26,45 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 
+  &__btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(135, 211, 236);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__nav {
 
-    & p {
-      font-weight: bold;
-    }
-    
     & .menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding-left: 0;
+      & li {
+        
+        & a {
+          width: fit-content;
+          padding: 0.5rem;
+          border-radius: 5px;
+          background-color: rgb(135, 211, 236);
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: rgb(33, 179, 228);
+          }
+
+          // Pour annuler le style par défaut des menus
+          &::before {
+            visibility: hidden;
+          }
+        }
+      }
     }
   }
 }
