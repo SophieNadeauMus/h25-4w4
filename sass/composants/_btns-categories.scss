@@ -21,6 +21,10 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
       cursor: pointer;
       filter: brightness(0.8);
     }
+
+    &.active{
+      background-color: $couleur__accent--fonce;
+    }
   }
 }
 

@@ -210,6 +210,9 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   cursor: pointer;
   filter: brightness(0.8);
 }
+.categorie__ul__li.active {
+  background-color: #ef9d3f;
+}
 
 /* //////////////////////////////
 Les layouts
