@@ -1,0 +1,21 @@
+.destination {
+
+  &__titre{}
+
+  &__list{
+
+    &__article{
+      h3 {
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      &__contenu{
+
+      }
+    }
+  }
+}

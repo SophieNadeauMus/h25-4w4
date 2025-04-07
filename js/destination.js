@@ -36,17 +36,31 @@
                 
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
-                    articleElement.classList.add
+                    articleElement.classList.add('destination__list__article');
                    
                     articleElement.innerHTML = `
                         <h3>${article.title.rendered}</h3>
-
-                        <p>${article.excerpt.rendered}</p>
-                        <a href="${article.link}">Lire plus</a>
+                        <div class="destination__list__article__contenu" style="display: none;">
+                            <p>${article.excerpt.rendered}</p>
+                            <a href="${article.link}">Lire plus</a>
+                        </div>
                     `;
+
+                    // Ajouter un événement au clic pour afficher le contenu
+                    const titreElement = articleElement.querySelector('h3');
+                    const contenuElement = articleElement.querySelector('.destination__list__article__contenu');
+                    
+                    titreElement.addEventListener('click', function() {
+                        // console.log("titreElement = ", titreElement);
+                      
+                        // Basculer l'affichage du contenu
+                        const estVisible = contenuElement.style.display == 'block';
+                        contenuElement.style.display = estVisible ? 'none' : 'block';                    
+                    });
+
                     destinationList .appendChild(articleElement);
                 });
             })
-            .catch(error => console.error('Erreur lors de la récupération des articles:', error));
+        .catch(error => console.error('Erreur lors de la récupération des articles:', error));
     }   
 })();

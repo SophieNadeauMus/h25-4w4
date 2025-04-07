@@ -214,6 +214,10 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   background-color: #ef9d3f;
 }
 
+.destination__list__article h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 /* //////////////////////////////
 Les layouts
 ////////////////////////////// */
