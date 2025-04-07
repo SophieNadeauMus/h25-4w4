@@ -187,6 +187,30 @@ Les composants
   text-decoration: none;
 }
 
+/*
+btns-categories.scss //////////////////////////////////////////// .categorie__ul
+*/
+.categorie__ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  width: fit-content;
+  padding-left: 0;
+  gap: 1rem 1.5rem;
+}
+.categorie__ul__li {
+  background-color: bisque;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.categorie__ul__li:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
 /* //////////////////////////////
 Les layouts
 ////////////////////////////// */
@@ -507,25 +531,4 @@ footer {
 }
 .erreur__nav .menu li a::before {
   visibility: hidden;
-}
-
-.destination .categorie__ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 1rem auto;
-  width: fit-content;
-  padding-left: 0;
-  gap: 1rem 1.5rem;
-}
-.destination .categorie__ul__li {
-  background-color: bisque;
-  list-style: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: all 0.2s;
-}
-.destination .categorie__ul__li:hover {
-  cursor: pointer;
-  filter: brightness(0.8);
 }/*# sourceMappingURL=style.css.map */

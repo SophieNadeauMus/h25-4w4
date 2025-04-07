@@ -22,7 +22,7 @@
         echo '<ul class="categorie__ul">';
         foreach ($sous_categories as $categorie) {
           // Afficher le nom de chaque sous-catégorie
-          echo '<li  data-category-id="' . esc_html($categorie->term_id) . '" class="categorie__ul__li">' . esc_html($categorie->name) . '</li>';
+          echo '<li  data-category_id="' . esc_html($categorie->term_id) . '" class="categorie__ul__li">' . esc_html($categorie->name) . '</li>';
         }
         echo '</ul>';
       } else {

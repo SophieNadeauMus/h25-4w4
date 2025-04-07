@@ -13,7 +13,7 @@
     </div>
   </section>
   <!-- //////////////////////////////////////////////////// section rest-api -->
-  <section class="destination global">
+  <section class="global">
     <?php categories_liste("destination"); ?>
     <h2 class="destination__titre">Articles de la catégorie</h2>
     <div class="destination__list"></div>
