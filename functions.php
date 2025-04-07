@@ -6,6 +6,7 @@
   $function_files = array(
       'customizer.php',
       'options.php',
+      'genere-btns.php',
   );
 
   // Boucle pour inclure tous les fichiers
