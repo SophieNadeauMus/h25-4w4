@@ -87,17 +87,18 @@
       'type' => 'text',
     ));
     /////////////////////////////////////////////////// début du champ hero_background
-    // Ajout de l'image d'arrière-plan
-    $wp_customize->add_setting('hero_background', array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    // Ajout du contrôle de l'image d'arrière-plan
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-        'label' => __('Image en arrière-plan', 'theme_4w4'),
-        'section' => 'hero_section',
-    )));
-    
+    // Ajout du carrousel photos
+    for ($k = 0; $k<3 ; $k++){
+      $wp_customize->add_setting('hero_background' . $k, array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      // Ajout du contrôle du carrousel photos
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background' . $k, array(
+          'label' => __('Image en arrière-plan' . ($k+1), 'theme_4w4'),
+          'section' => 'hero_section',
+      )));
+    }
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE FOOTER
     $wp_customize->add_section('footer_section', array(
       'title' => __('Footer', 'theme_4w4'),
