@@ -1,4 +1,4 @@
-# Laboratoire #5 : Modifier l’application REST-API 
+# Exercice 2 : Créer un carrousel animé dans la section « Hero »
 ## Concevoir un site Wordpress pour un club de voyage
 ### Auteur: Sophie Nadeau
 La réalisation de ce thème permet la personnalisation d'un site de voyage

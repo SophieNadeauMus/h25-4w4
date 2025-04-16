@@ -1,27 +1,46 @@
 (function(){
-  console.log("carrousel.js")
   let hero__radio__input = document.querySelectorAll(".hero__radio__input");
   let hero__carrousel = document.querySelectorAll(".hero__carrousel");
-  
-  // Au départ, on cache toutes les images du carrousel sauf la première
-  hero__carrousel.forEach((image, index) =>  {
-    image.style.opacity = index == 0 ? "1" : "0";
-  })
- 
-  hero__radio__input.forEach(radio__input => {
+  let index__active = 0;
+  let intervalle;
+
+  // Fonction pour changer l'image active
+  function AfficherImage(index) {
+    hero__carrousel.forEach((image, i) => {
+      image.classList.toggle("hero__carrousel--active", i == index);
+    });
+
+    // Mettre à jour l'attribut "checked" des boutons radio
+    hero__radio__input.forEach((radio, i) => {
+      radio.checked = (i == index);
+    });
+  }
+
+  // Fonction pour démarrer l'intervalle pour changer d'image automatiquement
+  function CommencerIntervalle() {
+    intervalle = setInterval(() => {
+      index__active = (index__active + 1) % hero__carrousel.length;
+      AfficherImage(index__active);
+    }, 5000); // 5 secondes
+  }
+
+  // Fonction pour réinitialiser l'intervalle
+  function ReinitialiserIntervalle() {
+    clearInterval(intervalle);
+    CommencerIntervalle();
+  }
+
+  // Afficher l'image initiale au chargement de la page
+  AfficherImage(index__active);
+  CommencerIntervalle();
+
+  hero__radio__input.forEach((radio__input, index ) => {
     radio__input.addEventListener("click", function() {
-
-      // Récupérer l'ID du bouton radio et de l'image correspondante
-      let hero__radio__input__id = radio__input.getAttribute("data-id_radio");
-
-      // Afficher l'image correspondante et cacher les autres
-      hero__carrousel.forEach((image, index) => {
-        if (hero__radio__input__id == index) {
-          image.style.opacity = "1";
-        } else {
-          image.style.opacity = "0";
-        }
-      });
+      // Changer l'image active lorsque le bouton radio est cliqué
+      index__active = index;
+      AfficherImage(index__active);
+      // Réinitialiser l'intervalle si l'utilisateur clique sur un bouton radio
+      ReinitialiserIntervalle();
     });  
   });
 })();

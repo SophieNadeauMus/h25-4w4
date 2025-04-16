@@ -95,7 +95,7 @@
       ));
       // Ajout du contrôle du carrousel photos
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background' . $k, array(
-          'label' => __('Image en arrière-plan' . ($k+1), 'theme_4w4'),
+          'label' => __('Image en arrière-plan ' . ($k+1), 'theme_4w4'),
           'section' => 'hero_section',
       )));
     }
