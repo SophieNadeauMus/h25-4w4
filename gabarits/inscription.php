@@ -1,5 +1,5 @@
 <!-- Gabarit du formulaire d'inscription de la page d'accueil -->
-<section class="inscription global">
+<section class="inscription">
   <form class="inscription__form" action="">
     <div class="inscription__form--champ">
       <label for="nom">Nom</label>

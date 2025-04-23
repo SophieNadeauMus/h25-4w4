@@ -35,6 +35,7 @@
   }
 
   &__titre {
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
     text-shadow: 2px 2px 5px $couleur__tertiaire;
   }
 

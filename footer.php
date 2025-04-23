@@ -1,10 +1,12 @@
 <?php 
   $footer_mission = get_theme_mod('footer_mission', 'Notre mission');
+  $footer_couleur = get_theme_mod('footer_couleur', 'bisque');
   $coord_adresse = get_theme_mod('coord_adresse', ''); 
   $coord_telephone = get_theme_mod('coord_telephone', '');
   $coord_courriel = get_theme_mod('coord_courriel', ''); 
 ?>
-<footer>
+<?php genere_vague($footer_couleur); ?> 
+<footer style="background-color:<?= $footer_couleur ?>">
   <div class="piedpage">
     <section class="piedpage__s1">
       <div class="piedpage__s1__externe">

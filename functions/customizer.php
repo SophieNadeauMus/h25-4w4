@@ -111,12 +111,24 @@
       'default' => __('', 'theme_4w4'),
       'sanitize_callback' => 'sanitize_text_field'
     ));
-    /////////////////////////////////////////// ajout du contrôle de la mission
+    // Ajout du contrôle de la mission
     $wp_customize->add_control('footer_mission', array(
       'label' => __('Mission', 'theme_4w4'),
       'section' => 'footer_section',
       'type' => 'textarea',
     ));
+    /////////////////////////////////////////////////// début du champ footer_couleur
+    // Ajout de la couleur de fond
+    $wp_customize->add_setting('footer_couleur', array(
+      'default' => 'bisque',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    // Ajout du contrôle de la couleur du texte
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_couleur', array(
+        'label' => __('Couleur de fond', 'theme_4w4'),
+        'section' => 'footer_section',
+    )));
+    
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE ERREUR 404
     $wp_customize->add_section('section_404', array(
       'title' => __('Erreur 404', 'theme_4w4'),
