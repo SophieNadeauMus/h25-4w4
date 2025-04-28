@@ -18,26 +18,22 @@
     align-items: center;
     padding: 2rem 1rem 1rem 1rem; 
     background-color: $couleur__primaire;
-    border: 1px solid $couleur__tertiaire;
     border-radius: 10px;
     text-align: center;
     flex: 1;
   }
   &__titre {
     width: fit-content;
-  }
-  &__description {}
-  &__bouton {
-    text-decoration: none;
-    &--actif {
-      background-color: $couleur__accent;
-      color: white;
-      padding: 0.3rem;
-      border-radius: 5px;
-    }
-    &--actif:hover {
-      background-color: $couleur__accent--fonce;
-      color: rgba(255, 255, 255, 0.75);
+
+    & a {
+      font-size: inherit;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
 }

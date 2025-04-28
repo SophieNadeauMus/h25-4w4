@@ -24,6 +24,7 @@ Les balises de base
 body {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
+  color: #25575c;
   overflow-x: hidden;
 }
 
@@ -207,7 +208,6 @@ Les composants
   align-items: center;
   padding: 2rem 1rem 1rem 1rem;
   background-color: #dffdff;
-  border: 1px solid #48a1a9;
   border-radius: 10px;
   text-align: center;
   flex: 1;
@@ -215,18 +215,14 @@ Les composants
 .carte__titre {
   width: fit-content;
 }
-.carte__bouton {
+.carte__titre a {
+  font-size: inherit;
+  color: inherit;
   text-decoration: none;
 }
-.carte__bouton--actif {
-  background-color: #edb066;
-  color: white;
-  padding: 0.3rem;
-  border-radius: 5px;
-}
-.carte__bouton--actif:hover {
-  background-color: #ef9d3f;
-  color: rgba(255, 255, 255, 0.75);
+.carte__titre a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Icones des résaux sociaux */
@@ -248,6 +244,7 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 }
 .categorie__ul__li {
   background-color: bisque;
+  color: #25575c;
   list-style: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -359,12 +356,12 @@ body:has(#input--toggle:checked) {
   font-weight: bold;
 }
 .hero__carrousel {
-  opacity: 0;
   position: absolute;
   min-height: 100vh;
   width: 100%;
   background-position: center;
   z-index: -1;
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
 .hero__carrousel--active {
@@ -386,7 +383,7 @@ body:has(#input--toggle:checked) {
   text-shadow: 2px 2px 5px #48a1a9;
 }
 .hero__description {
-  width: 40%;
+  width: clamp(15rem, 50vw + 1rem, 45rem);
 }
 .hero__bouton {
   margin-bottom: 1rem;
@@ -475,14 +472,14 @@ footer {
 }
 .post-categories li a {
   text-decoration: none;
-  color: black;
+  color: inherit;
   padding: 0.5rem;
   border-radius: 5px;
-  background-color: #edb066;
+  background-color: bisque;
 }
 .post-categories li a:hover {
-  color: white;
-  background-color: #ef9d3f;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
 }
 
 .recherche__section {
@@ -566,4 +563,25 @@ footer {
 }
 .erreur__nav .menu li a::before {
   visibility: hidden;
+}
+
+.hero__titre,
+.hero__description {
+  position: relative;
+  animation: contenu linear 1s forwards;
+}
+
+.hero__titre {
+  transform: translateY(-1000px);
+}
+
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 1s;
+}
+
+@keyframes contenu {
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=style.css.map */

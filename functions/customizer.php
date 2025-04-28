@@ -88,7 +88,7 @@
     ));
     /////////////////////////////////////////////////// début du champ hero_background
     // Ajout du carrousel photos
-    for ($k = 0; $k<3 ; $k++){
+    for ($k = 0; $k < 3 ; $k++){
       $wp_customize->add_setting('hero_background' . $k, array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',

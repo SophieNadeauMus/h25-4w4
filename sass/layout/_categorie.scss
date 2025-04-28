@@ -13,14 +13,14 @@
   li {
     a {
       text-decoration: none;
-      color: black;
+      color: inherit;
       padding: 0.5rem;
       border-radius: 5px;
-      background-color: $couleur__accent;
+      background-color: $couleur__accent--clair;
     }
     a:hover {
-      color: white;
-      background-color: $couleur__accent--fonce;
+      filter: brightness(0.8);
+      transition: filter 0.3s ease;
     }
   }
 }

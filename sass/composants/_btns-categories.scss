@@ -12,6 +12,7 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 
   &__li {
     background-color: $couleur__accent--clair;
+    color: $couleur__texte;
     list-style: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;

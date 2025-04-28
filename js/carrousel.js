@@ -34,8 +34,8 @@
   AfficherImage(index__active);
   CommencerIntervalle();
 
-  hero__radio__input.forEach((radio__input, index ) => {
-    radio__input.addEventListener("click", function() {
+  hero__radio__input.forEach((radio__input, index) => {
+    radio__input.addEventListener("mousedown", function() {
       // Changer l'image active lorsque le bouton radio est cliqué
       index__active = index;
       AfficherImage(index__active);

@@ -12,18 +12,20 @@
 ?>
 <section class="hero" style="color: <?= $hero_couleur; ?>">
   <?php for ($k = 0; $k < 3; $k++) : ?>
-  <div class="hero__carrousel" style="background-image: url(<?= $hero_background[$k] ?>);"></div> 
+    <div class="hero__carrousel" style="background-image: url(<?= $hero_background[$k] ?>);"></div> 
   <?php endfor; ?>
   <div class="hero__radio">
     <?php for ($k = 0; $k < 3; $k++) : ?>
-    <input class="hero__radio__input" data-id_radio="<?= $k ?>" type="radio" name="carrousel" <?= $k == 0 ? 'checked="checked"' : ''; ?>>
+      <input class="hero__radio__input" data-id_radio="<?= $k ?>" type="radio" name="carrousel">
     <?php endfor; ?>
   </div>
   <div class="hero__contenu global">
-    <h1 class="hero__titre">Club de voyage</h1>
-    <p class="hero__description">
-      <?= $coord_description; ?>
-    </p>
+    <div class="hero__animation">
+      <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+      <p class="hero__description">
+        <?= $coord_description; ?>
+      </p>
+    </div>
     <p class="hero__courriel">
       <a href="#">
         <?= $coord_courriel; ?>
