@@ -1,7 +1,19 @@
-.hero__titre,
-.hero__description {
-  position: relative;
-  animation: contenu linear 1s forwards;
+/** 
+* Animations de la section hero
+*/
+
+.hero__animation {
+  display: none;
+
+  &--active {
+    display: block;
+
+    .hero__titre,
+    .hero__description {
+      position: relative;
+      animation: contenu linear 1s forwards;
+    }
+  }
 }
 
 .hero__titre {

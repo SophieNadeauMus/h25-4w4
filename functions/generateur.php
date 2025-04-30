@@ -33,6 +33,11 @@
     }
   }
 
+  // Filtrer l'affichage des catégories de chaque destination selon la page où l'on se trouve
+  function categorie_par_destination($cat_a_retirer) {
+      // ******** À compléter ********
+  }
+
   /**
    * Génère une ou plusierus vagues svg
    */

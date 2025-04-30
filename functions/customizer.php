@@ -86,6 +86,23 @@
       'section' => 'hero_section',
       'type' => 'text',
     ));
+    /////////////////////////////////////////////////// début du champ hero_background_nombre
+    // Ajout du nombre d'images pour le carrousel ************* À MODIFIER
+    $wp_customize->add_setting('hero_background_nombre', array(
+      'default' => 3,
+      'sanitize_callback' => 'absint',
+    ));
+    // Ajout du contrôle du nombre d'images pour le carrousel
+    $wp_customize->add_control('hero_background_nombre', array(
+      'label' => __('Nombre d\'images pour le carrousel', 'theme_4w4'),
+      'section' => 'hero_section',
+      'type' => 'number',
+      'input_attrs' => array(
+        'min' => 1,
+        'max' => 10,
+      ),
+    ));
+
     /////////////////////////////////////////////////// début du champ hero_background
     // Ajout du carrousel photos
     for ($k = 0; $k < 3 ; $k++){

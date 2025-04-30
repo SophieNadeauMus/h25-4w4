@@ -16,15 +16,22 @@
   <?php endfor; ?>
   <div class="hero__radio">
     <?php for ($k = 0; $k < 3; $k++) : ?>
-      <input class="hero__radio__input" data-id_radio="<?= $k ?>" type="radio" name="carrousel">
+      <input class="hero__radio__input" data-id_radio="<?= $k ?>" type="radio" id="radio<?= $k ?>" name="carrousel">
+      <label for="radio<?= $k ?>" class="hero__radio__label"></label>
     <?php endfor; ?>
   </div>
   <div class="hero__contenu global">
     <div class="hero__animation">
       <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
-      <p class="hero__description">
-        <?= $coord_description; ?>
-      </p>
+      <p class="hero__description"><?= $coord_description; ?></p>
+    </div>
+    <div class="hero__animation">
+      <h1 class="hero__titre">Lorem ipsum dolor</h1>
+      <p class="hero__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis accusamus quisquam iusto tempore non, nobis aliquam est maiores, error numquam molestias id nulla eveniet totam ipsa sunt vitae sequi nam?</p>
+    </div>
+    <div class="hero__animation">
+      <h1 class="hero__titre">sadrftgyhj</h1>
+      <p class="hero__description">zzzzzzzzzzzzzzzzz</p>
     </div>
     <p class="hero__courriel">
       <a href="#">

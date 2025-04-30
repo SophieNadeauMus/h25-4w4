@@ -83,7 +83,7 @@ Les composants
 }
 .menu-item a {
   text-decoration: none;
-  color: black;
+  color: inherit;
   margin: 0.2rem 0.5rem;
   position: relative;
   display: inline-block;
@@ -375,8 +375,34 @@ body:has(#input--toggle:checked) {
   justify-content: center;
   gap: 2rem;
 }
-.hero__radio__input:hover {
+.hero__radio__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.hero__radio__input:checked + label::after {
+  background-color: #dffdff; /* Changer la couleur quand sélectionné */
+}
+.hero__radio__label {
+  display: inline-block;
   cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  z-index: 1;
+}
+.hero__radio label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: rgba(223, 253, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
 }
 .hero__titre {
   font-size: clamp(2rem, 5vw + 1rem, 4rem);
@@ -404,7 +430,6 @@ body:has(#input--toggle:checked) {
   --------------------------------------------------------Layout du pied de page
 */
 footer {
-  color: #000;
   padding: clamp(1rem, 5%, 2rem);
 }
 
@@ -473,13 +498,14 @@ footer {
 .post-categories li a {
   text-decoration: none;
   color: inherit;
+  font-weight: 600;
   padding: 0.5rem;
   border-radius: 5px;
   background-color: bisque;
+  transition: filter 0.3s ease;
 }
 .post-categories li a:hover {
   filter: brightness(0.8);
-  transition: filter 0.3s ease;
 }
 
 .recherche__section {
@@ -565,8 +591,17 @@ footer {
   visibility: hidden;
 }
 
-.hero__titre,
-.hero__description {
+/** 
+* Animations de la section hero
+*/
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__animation--active .hero__titre,
+.hero__animation--active .hero__description {
   position: relative;
   animation: contenu linear 1s forwards;
 }

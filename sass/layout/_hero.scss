@@ -5,7 +5,6 @@
   font-weight: bold;
 
   &__carrousel {
-    
     position: absolute;
     min-height: 100vh;
     width: 100%;
@@ -28,10 +27,36 @@
     gap: 2rem;
 
     &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
 
-      &:hover {
-        cursor: pointer;
-      }
+    &__input:checked + label::after {
+      background-color: $couleur__primaire; /* Changer la couleur quand sélectionné */
+    }
+
+    &__label {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      padding: 0.5rem;
+      z-index: 1;
+    }
+
+    & label::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background-color: rgba($couleur__primaire, 0.5);
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s ease;
     }
   }
 
