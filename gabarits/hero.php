@@ -1,38 +1,49 @@
 <!-- Section hero contenant les infos du site et l'image d'arrière-plan -->
 <?php 
-  $coord_description = get_theme_mod('coord_description', '');
   $coord_courriel = get_theme_mod('coord_courriel', '');
   $coord_adresse = get_theme_mod('coord_adresse', '');
   $coord_telephone = get_theme_mod('coord_telephone', '');
   $hero_couleur = get_theme_mod('hero_couleur', '');
-  $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
-  for ($k = 0; $k < 3; $k++) {
+  $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
+  $hero_background = [];
+  $hero_background_nombre = get_theme_mod('hero_background_nombre', 3);
+  for ($k = 0; $k < $hero_background_nombre ; $k++){
     $hero_background[$k] = get_theme_mod('hero_background' . $k, '');
   }
 ?>
 <section class="hero" style="color: <?= $hero_couleur; ?>">
-  <?php for ($k = 0; $k < 3; $k++) : ?>
-    <div class="hero__carrousel" style="background-image: url(<?= $hero_background[$k] ?>);"></div> 
+  <?php for ($k = 0; $k < $hero_background_nombre; $k++) : ?>
+    <?php if (!empty($hero_background[$k])) : ?>
+      <div class="hero__carrousel" style="background-image: url(<?= $hero_background[$k] ?>);"></div> 
+    <?php endif; ?>
   <?php endfor; ?>
   <div class="hero__radio">
-    <?php for ($k = 0; $k < 3; $k++) : ?>
+    <?php for ($k = 0; $k < $hero_background_nombre; $k++) : ?>
       <input class="hero__radio__input" data-id_radio="<?= $k ?>" type="radio" id="radio<?= $k ?>" name="carrousel">
       <label for="radio<?= $k ?>" class="hero__radio__label"></label>
     <?php endfor; ?>
   </div>
   <div class="hero__contenu global">
-    <div class="hero__animation">
-      <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
-      <p class="hero__description"><?= $coord_description; ?></p>
-    </div>
-    <div class="hero__animation">
-      <h1 class="hero__titre">Lorem ipsum dolor</h1>
-      <p class="hero__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis accusamus quisquam iusto tempore non, nobis aliquam est maiores, error numquam molestias id nulla eveniet totam ipsa sunt vitae sequi nam?</p>
-    </div>
-    <div class="hero__animation">
-      <h1 class="hero__titre">sadrftgyhj</h1>
-      <p class="hero__description">zzzzzzzzzzzzzzzzz</p>
-    </div>
+    <?php for ($k = 0; $k < $hero_background_nombre; $k++) : 
+      $titre = get_theme_mod("hero_titre_$k", '');
+      $description = get_theme_mod("hero_description_$k", '');
+
+      // Si il n’y a pas de titre, on utilise le nom du site
+      if (empty($titre)) {
+        $titre = get_bloginfo('name');
+      }
+
+      if (!empty($titre) || !empty($description)) : ?>
+        <div class="hero__animation">
+          <?php if (!empty($titre)) : ?>
+            <h1 class="hero__titre"><?= esc_html($titre); ?></h1>
+          <?php endif; ?>
+          <?php if (!empty($description)) : ?>
+            <p class="hero__description"><?= esc_html($description); ?></p>
+          <?php endif; ?>
+        </div>
+    <?php endif; endfor; ?>
+
     <p class="hero__courriel">
       <a href="#">
         <?= $coord_courriel; ?>

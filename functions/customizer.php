@@ -44,18 +44,6 @@
       'section' => 'coord_section',
       'type' => 'text',
     ));
-    /////////////////////////////////////////////////// début du champ coord_description
-    // Ajout de la description
-    $wp_customize->add_setting('coord_description', array(
-      'default' => __('Description du site Web', 'theme_4w4'),
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    // Ajout du contrôle de la description du site
-    $wp_customize->add_control('coord_description', array(
-      'label' => __('Description', 'theme_4w4'),
-      'section' => 'coord_section',
-      'type' => 'textarea',
-    ));
 
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE HERO
     $wp_customize->add_section('hero_section', array(
@@ -67,7 +55,7 @@
     // Ajout de la couleur du texte
     $wp_customize->add_setting('hero_couleur', array(
       'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'sanitize_hex_color',
     ));
     // Ajout du contrôle de la couleur du texte
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_couleur', array(
@@ -103,9 +91,11 @@
       ),
     ));
 
+    $max_images = 10; // Nombre maximum d'images
+
     /////////////////////////////////////////////////// début du champ hero_background
     // Ajout du carrousel photos
-    for ($k = 0; $k < 3 ; $k++){
+    for ($k = 0; $k < $max_images ; $k++){
       $wp_customize->add_setting('hero_background' . $k, array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
@@ -114,8 +104,41 @@
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background' . $k, array(
           'label' => __('Image en arrière-plan ' . ($k+1), 'theme_4w4'),
           'section' => 'hero_section',
+          'active_callback' => function() use ($k) {
+            return get_theme_mod('hero_background_nombre') > $k;
+          },
       )));
-    }
+      /////////////////////////////////////////////////// début du champ hero_titre
+      // Ajout du titre
+      $wp_customize->add_setting("hero_titre_$k", array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      // Ajout du contrôle du titre
+      $wp_customize->add_control("hero_titre_$k", array(
+        'label' => __('Titre de l’image ' . ($k + 1), 'theme_4w4'),
+        'section' => 'hero_section',
+        'type' => 'text',
+        'active_callback' => function() use ($k) {
+          return get_theme_mod('hero_background_nombre') > $k;
+        },
+      ));
+      /////////////////////////////////////////////////// début du champ hero_description
+      // Ajout de la description
+      $wp_customize->add_setting("hero_description_$k", array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      // Ajout du contrôle de la description du site
+      $wp_customize->add_control("hero_description_$k", array(
+        'label' => __('Description de l’image ' . ($k + 1), 'theme_4w4'),
+        'section' => 'hero_section',
+        'type' => 'textarea',
+        'active_callback' => function() use ($k) {
+          return get_theme_mod('hero_background_nombre') > $k;
+        },
+      ));
+    } // Fin de la boucle pour le carrousel d'images
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE FOOTER
     $wp_customize->add_section('footer_section', array(
       'title' => __('Footer', 'theme_4w4'),

@@ -33,9 +33,24 @@
     }
   }
 
-  // Filtrer l'affichage des catégories de chaque destination selon la page où l'on se trouve
+  /**
+   * Filtre les catégories affichées en fonction de la destination
+   * 
+   * @param string||null $cat_a_retirer Le slug de la catégorie à retirer 
+   * @return array Catégories filtrées
+   */
   function categorie_par_destination($cat_a_retirer) {
-      // ******** À compléter ********
+    // *********** À MODIFIER ***********
+    //   $cat_a_retirer = null;
+
+    //   $categoriesDestination = get_the_category();
+    //   $categories = array();
+    //   foreach ($categoriesDestination as $categorie) {
+    //       if ($categorie->slug !== $cat_a_retirer) {
+    //           $categories[] = $categorie;
+    //       }
+    //   }
+    // return $categories;
   }
 
   /**

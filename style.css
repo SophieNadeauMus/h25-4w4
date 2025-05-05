@@ -603,20 +603,22 @@ footer {
 .hero__animation--active .hero__titre,
 .hero__animation--active .hero__description {
   position: relative;
+  opacity: 0;
   animation: contenu linear 1s forwards;
 }
 
 .hero__titre {
-  transform: translateY(-1000px);
+  transform: translateY(-100%);
 }
 
 .hero__description {
-  transform: translateX(-1000px);
+  transform: translateX(-100%);
   animation-delay: 1s;
 }
 
 @keyframes contenu {
   100% {
+    opacity: 1;
     transform: translate(0, 0);
   }
 }/*# sourceMappingURL=style.css.map */
