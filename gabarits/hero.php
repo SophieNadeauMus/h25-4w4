@@ -44,23 +44,22 @@
         </div>
     <?php endif; endfor; ?>
 
-    <p class="hero__courriel">
-      <a href="#">
-        <?= $coord_courriel; ?>
-      </a>
-    </p>
-    <p class="hero__adresse">
-    <?= $coord_adresse; ?>
-    </p>
-    <p class="hero__telephone">
-    <?= $coord_telephone; ?>
-    </p>
-    <p class="hero__auteur">Auteur : <?= $hero_auteur; ?></p>
-    <!-- <button class="hero__bouton" type="submit">
-      S'INSCRIRE
-    </button> -->
-    <div class="hero__icone">
-      <?php get_template_part('gabarits/icone-sociaux'); ?>
+    <div class="hero__coord">
+      <p class="hero__courriel">
+        <a href="#">
+          <?= $coord_courriel; ?>
+        </a>
+      </p>
+      <p class="hero__adresse">
+      <?= $coord_adresse; ?>
+      </p>
+      <p class="hero__telephone">
+      <?= $coord_telephone; ?>
+      </p>
+      <p class="hero__auteur">Auteur : <?= $hero_auteur; ?></p>
+      <div class="hero__icone">
+        <?php get_template_part('gabarits/icone-sociaux'); ?>
+      </div>
     </div>
   </div>
 </section>

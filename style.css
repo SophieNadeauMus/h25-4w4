@@ -211,6 +211,11 @@ Les composants
   border-radius: 10px;
   text-align: center;
   flex: 1;
+  transition: all 0.3s ease;
+}
+.carte__contenu:hover {
+  background-color: rgba(88, 192, 201, 0.6);
+  transform: scale(1.05);
 }
 .carte__titre {
   width: fit-content;
@@ -258,10 +263,30 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   background-color: #ef9d3f;
 }
 
-.destination__list__article h3:hover {
+.destination {
+  margin-bottom: 0;
+}
+.destination__list__article {
+  background-color: #dffdff;
+}
+.destination__list__article h4 {
+  margin: 0.5rem auto 0 auto;
+}
+.destination__list__article h4:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+.destination__list__article__contenu {
+  max-height: 0;
+  overflow: hidden;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.destination__list__article__contenu.visible {
+  max-height: 200px;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
 .vague {
   position: relative;
 }
@@ -325,7 +350,7 @@ body:has(#input--toggle:checked) {
   .entete__navigation {
     position: fixed;
     inset: 0; /* Pour que le menu prenne toute la largeur et la hauteur de la fenêtre */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 228, 196, 0.95);
     flex-direction: column;
     padding-top: 15vh;
     display: none;
@@ -354,6 +379,16 @@ body:has(#input--toggle:checked) {
   background-repeat: no-repeat;
   min-height: 100vh;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.hero__contenu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .hero__carrousel {
   position: absolute;
@@ -410,6 +445,11 @@ body:has(#input--toggle:checked) {
 }
 .hero__description {
   width: clamp(15rem, 50vw + 1rem, 45rem);
+}
+.hero__coord {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .hero__bouton {
   margin-bottom: 1rem;

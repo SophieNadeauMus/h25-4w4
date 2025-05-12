@@ -2,7 +2,7 @@
 * Script js permettant d'extraire les destinations de voyage
 */
 (function(){
-    const domaine = window.location.href;
+    const domaine = document.querySelector('base').href;
     parcourir_boutons();
 
     // Fonction pour parcourir les boutons de catégorie
@@ -39,26 +39,25 @@
                     articleElement.classList.add('destination__list__article');
                    
                     articleElement.innerHTML = `
-                        <h3>${article.title.rendered}</h3>
-                        <div class="destination__list__article__contenu" style="display: none;">
+                        <h4>${article.title.rendered}</h4>
+                        <div class="destination__list__article__contenu">
                             <p>${article.excerpt.rendered}</p>
                             <a href="${article.link}">Lire plus</a>
                         </div>
                     `;
 
                     // Ajouter un événement au clic pour afficher le contenu
-                    const titreElement = articleElement.querySelector('h3');
+                    const titreElement = articleElement.querySelector('h4');
                     const contenuElement = articleElement.querySelector('.destination__list__article__contenu');
                     
                     titreElement.addEventListener('click', function() {
                         // console.log("titreElement = ", titreElement);
                       
-                        // Basculer l'affichage du contenu
-                        const estVisible = contenuElement.style.display == 'block';
-                        contenuElement.style.display = estVisible ? 'none' : 'block';                    
+                        // Basculer la classe 'visible' pour afficher ou masquer le contenu
+                        contenuElement.classList.toggle('visible');                   
                     });
 
-                    destinationList .appendChild(articleElement);
+                    destinationList.appendChild(articleElement);
                 });
             })
         .catch(error => console.error('Erreur lors de la récupération des articles:', error));

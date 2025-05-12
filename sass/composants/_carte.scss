@@ -21,6 +21,12 @@
     border-radius: 10px;
     text-align: center;
     flex: 1;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba($couleur__secondaire, 0.6);
+      transform: scale(1.05);
+    }
   }
   &__titre {
     width: fit-content;

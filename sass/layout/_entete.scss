@@ -16,7 +16,7 @@
     @media screen and (max-width: 800px){
       position: fixed;
       inset: 0; /* Pour que le menu prenne toute la largeur et la hauteur de la fenêtre */
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba($couleur__accent--clair, 0.95);
       flex-direction: column;
       padding-top: 15vh;
       display: none; //cacher le menu par défaut
@@ -30,14 +30,14 @@
     align-items: center;
   }
 
-  // Gestion du menu burger
-  #input--toggle{
-    display: none;
-  }
+    // Gestion du menu burger
+    #input--toggle{
+      display: none;
+    }
 
-  #input--toggle:checked ~ .entete__navigation{
-    display: flex;
-  }
+    #input--toggle:checked ~ .entete__navigation{
+      display: flex;
+    }
 
   .btn--toggle{
     display: none;

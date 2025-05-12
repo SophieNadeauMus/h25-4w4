@@ -1,11 +1,17 @@
 .destination {
+  margin-bottom: 0;
 
-  &__titre{}
+  &__titre{
+    
+  }
 
   &__list{
 
     &__article{
-      h3 {
+      background-color: $couleur__primaire;
+
+      h4 {
+        margin: 0.5rem auto 0 auto; 
 
         &:hover {
           cursor: pointer;
@@ -14,7 +20,15 @@
       }
 
       &__contenu{
+        max-height: 0;
+        overflow: hidden;
+        padding: 1rem;
+        transition: all 0.3s ease-in-out;
 
+        &.visible {
+          max-height: 200px;
+          box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
       }
     }
   }
