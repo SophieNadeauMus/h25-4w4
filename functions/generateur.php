@@ -58,6 +58,14 @@
     return $categories_filtrees;
   }
 
+  /**
+   * Génère la liste des icones sociaux
+   * À COMPLÉTER
+   */
+  function generer_icones_sociaux() {
+    
+  }
+
 
   /**
    * Génère une ou plusieurs vagues svg

@@ -23,8 +23,19 @@
                 // Mettre à jour l'URL de l'API avec la nouvelle catégorie
                 const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
                 parcourir_articles(apiUrl);
+
+                // Mettre à jour le titre de la section
+                document.querySelector('.destination__titre').innerHTML = `Articles de la catégorie : ${elm.innerText}`;
             });
-        })
+        });
+
+        // Charger la première catégorie par défaut
+        const categoryIdParDefaut = categorie__ul__li[0].dataset.category_id;
+        const categoryBtnDefaut = document.querySelector(`.categorie__ul__li[data-category_id="${categoryIdParDefaut}"]`);
+
+        if (categoryBtnDefaut) {
+            categoryBtnDefaut.click();
+        }
     }
 
     function parcourir_articles(apiUrl) {

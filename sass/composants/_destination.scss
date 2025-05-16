@@ -2,32 +2,49 @@
   margin-bottom: 0;
 
   &__titre{
-    
+    text-align: center;
+    color: $couleur__secondaire;
   }
 
   &__list{
 
     &__article{
       background-color: $couleur__primaire;
+      height: auto;
+      margin: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      box-shadow: 0 7px 7px -5px rgba($couleur__tertiaire, 0.3);
 
       h4 {
-        margin: 0.5rem auto 0 auto; 
+        margin: 0.5rem 0;
+        width: fit-content;
+        transition: all 0.2s ease;
 
         &:hover {
           cursor: pointer;
-          text-decoration: underline;
+          color: $couleur__secondaire;
         }
       }
 
       &__contenu{
         max-height: 0;
         overflow: hidden;
-        padding: 1rem;
         transition: all 0.3s ease-in-out;
 
         &.visible {
-          max-height: 200px;
-          box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+          max-height: 200px;  
+        }
+
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: $couleur__accent;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;        
+          }
         }
       }
     }

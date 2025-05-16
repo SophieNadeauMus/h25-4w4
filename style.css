@@ -260,31 +260,49 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   filter: brightness(0.8);
 }
 .categorie__ul__li.active {
-  background-color: #ef9d3f;
+  background-color: #edb066;
 }
 
 .destination {
   margin-bottom: 0;
 }
+.destination__titre {
+  text-align: center;
+  color: #58c0c9;
+}
 .destination__list__article {
   background-color: #dffdff;
+  height: auto;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 7px 7px -5px rgba(72, 161, 169, 0.3);
 }
 .destination__list__article h4 {
-  margin: 0.5rem auto 0 auto;
+  margin: 0.5rem 0;
+  width: fit-content;
+  transition: all 0.2s ease;
 }
 .destination__list__article h4:hover {
   cursor: pointer;
-  text-decoration: underline;
+  color: #58c0c9;
 }
 .destination__list__article__contenu {
   max-height: 0;
   overflow: hidden;
-  padding: 1rem;
   transition: all 0.3s ease-in-out;
 }
 .destination__list__article__contenu.visible {
   max-height: 200px;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.destination__list__article__contenu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #edb066;
+}
+.destination__list__article__contenu a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .vague {
