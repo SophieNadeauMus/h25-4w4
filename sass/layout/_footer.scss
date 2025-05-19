@@ -52,6 +52,9 @@ footer {
     }
   }
   &__s2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &__principal {
 
@@ -63,6 +66,15 @@ footer {
           margin-left: 0;
         }
       }
+    }
+  }
+
+  &__s3 {
+    width: fit-content;
+    margin: 1rem auto;
+
+    &__image img {
+      max-width: 30vw;
     }
   }
 }

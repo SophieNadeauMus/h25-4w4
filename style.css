@@ -532,6 +532,11 @@ footer {
 .piedpage__s1__description {
   flex: 1 0 clamp(250px, 40%, 400px);
 }
+.piedpage__s2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .piedpage__s2__principal .menu {
   flex-direction: row;
   padding-left: 0;
@@ -539,6 +544,13 @@ footer {
 }
 .piedpage__s2__principal .menu a {
   margin-left: 0;
+}
+.piedpage__s3 {
+  width: fit-content;
+  margin: 1rem auto;
+}
+.piedpage__s3__image img {
+  max-width: 30vw;
 }
 
 .categorie__entete {

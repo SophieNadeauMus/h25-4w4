@@ -75,7 +75,7 @@
       'type' => 'text',
     ));
     /////////////////////////////////////////////////// début du champ hero_background_nombre
-    // Ajout du nombre d'images pour le carrousel ************* À MODIFIER
+    // Ajout du nombre d'images pour le carrousel
     $wp_customize->add_setting('hero_background_nombre', array(
       'default' => 3,
       'sanitize_callback' => 'absint',
@@ -166,6 +166,17 @@
     // Ajout du contrôle de la couleur du texte
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_couleur', array(
         'label' => __('Couleur de fond', 'theme_4w4'),
+        'section' => 'footer_section',
+    )));
+    /////////////////////////////////////////////////// début du champ footer_image
+    // Ajout de l'image dans le footer
+    $wp_customize->add_setting('footer_image', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    // Ajout du contrôle de l'image dans le footer
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image', array(
+        'label' => __('Image du footer', 'theme_4w4'),
         'section' => 'footer_section',
     )));
     

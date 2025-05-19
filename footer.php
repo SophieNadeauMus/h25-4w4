@@ -3,7 +3,8 @@
   $footer_couleur = get_theme_mod('footer_couleur', 'bisque');
   $coord_adresse = get_theme_mod('coord_adresse', ''); 
   $coord_telephone = get_theme_mod('coord_telephone', '');
-  $coord_courriel = get_theme_mod('coord_courriel', ''); 
+  $coord_courriel = get_theme_mod('coord_courriel', '');
+  $footer_image = get_theme_mod('footer_image', '');
 ?>
 <?php genere_vague($footer_couleur); ?> 
 <footer style="background-color:<?= $footer_couleur ?>">
@@ -39,10 +40,13 @@
           "container" => "nav",
         )); ?>
       </div>
+      <div class="piedpage__s2__sociaux">
+        <?php get_template_part('gabarits/icone-sociaux'); ?>
+      </div>
     </section>
     <section class="piedpage__s3">
-      <div class="piedpage__s3__sociaux">
-        <?php get_template_part('gabarits/icone-sociaux'); ?>
+      <div class="piedpage__s3__image">
+        <img src="<?= esc_url($footer_image); ?>" alt="<?= esc_attr__('Image du footer', 'theme_4w4'); ?>">
       </div>
     </section>
   </div>
