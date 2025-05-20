@@ -179,7 +179,67 @@
         'label' => __('Image du footer', 'theme_4w4'),
         'section' => 'footer_section',
     )));
+
+    //////////////////////////////////////////////////// DÉBUT DE LA ZONE DES ICONES SOCIAUX
+    $wp_customize->add_section('sociaux_section', array(
+      'title' => __('Icônes sociaux', 'theme_4w4'),
+      'priority' => 30,
+    ));
     
+    /////////////////////////////////////////////////// début du champ sociaux_icones_nombre
+    // Ajout du nombre d'images pour les icônes
+    $wp_customize->add_setting('sociaux_icones_nombre', array(
+      'default' => 0,
+      'sanitize_callback' => 'absint',
+    ));
+    // Ajout du contrôle du nombre d'images pour les icônes
+    $wp_customize->add_control('sociaux_icones_nombre', array(
+      'label' => __('Nombre d\'icônes sociaux', 'theme_4w4'),
+      'section' => 'sociaux_section',
+      'type' => 'number',
+      'input_attrs' => array(
+        'min' => 1,
+        'max' => 10,
+      ),
+    ));
+
+    $max_icones = 10; // Nombre maximum d'icônes
+
+    /////////////////////////////////////////////////// début du champ sociaux_icones
+    // Ajout du carrousel photos
+    for ($k = 0; $k < $max_icones ; $k++) {
+      // Image de l'icône
+      $wp_customize->add_setting("sociaux_icones_$k", array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+      ));
+      $wp_customize->add_control("sociaux_icones_$k", array(
+        'label' => __('Icône ' . ($k+1), 'theme_4w4'),
+        'section' => 'sociaux_section',
+        'type' => 'text',
+        'input_attrs' => array(
+          'placeholder' => 'facebook, instagram, linkedin...',
+        ),
+
+        'active_callback' => function() use ($k) {
+          return get_theme_mod('sociaux_icones_nombre') > $k;
+        },
+      ));
+
+      // Lien de l'icône
+      $wp_customize->add_setting("sociaux_icones_lien_$k", array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      $wp_customize->add_control("sociaux_icones_lien_$k", array(
+        'label' => __('Lien pour l\'icône ' . ($k+1), 'theme_4w4'),
+        'section' => 'sociaux_section',
+        'type' => 'url',
+        'active_callback' => function() use ($k) {
+          return get_theme_mod('sociaux_icones_nombre') > $k;
+        },
+      ));
+    }
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE ERREUR 404
     $wp_customize->add_section('section_404', array(
       'title' => __('Erreur 404', 'theme_4w4'),

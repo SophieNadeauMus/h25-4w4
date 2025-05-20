@@ -63,7 +63,28 @@
    * À COMPLÉTER
    */
   function generer_icones_sociaux() {
+    $nombre_icones = get_theme_mod('sociaux_icones_nombre');
+    $couleur = get_theme_mod('sociaux_icones_couleur');
     
+    if($nombre_icones <= 0) {
+      return;
+    }
+
+    echo '<div class="icone__sociaux">';
+
+    for ($i = 0; $i <= $nombre_icones; $i++) {
+      $icone_nom = get_theme_mod('sociaux_icones_' . $i);
+      $icone_lien = get_theme_mod('sociaux_icones_lien_' . $i);
+      
+      if ($icone_lien && $icone_nom) {
+        $svg_url = "https://s2.svgbox.net/social.svg?ic=" . esc_attr($icone_nom);
+
+        echo '<a href="' . esc_url($icone_lien) . '" target="_blank" rel="noopener noreferrer">';
+        echo '<img src="' . esc_url($svg_url) . '" alt="' . esc_attr($icone_nom) . '" style= fill:' . esc_attr($couleur) . ';>';
+        echo '</a>';
+      }
+    }
+    echo '</div>';
   }
 
 

@@ -234,6 +234,17 @@ Les composants
 .icone__sociaux a {
   text-decoration: none;
 }
+.icone__sociaux a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  filter: invert(1);
+  transition: all 0.3s ease-in-out;
+}
+.icone__sociaux a img:hover {
+  transform: scale(1.1);
+  filter: invert(0.9);
+}
 
 /*
 btns-categories.scss //////////////////////////////////////////// .categorie__ul
@@ -469,6 +480,10 @@ body:has(#input--toggle:checked) {
   justify-content: space-between;
   align-items: center;
 }
+.hero__coord a {
+  text-decoration: none;
+  color: inherit;
+}
 .hero__bouton {
   margin-bottom: 1rem;
   padding: 0.3rem 0.5rem;
@@ -489,6 +504,9 @@ body:has(#input--toggle:checked) {
 */
 footer {
   padding: clamp(1rem, 5%, 2rem);
+}
+footer h5 {
+  margin-top: 0;
 }
 
 .piedpage {
@@ -514,7 +532,7 @@ footer {
   padding-left: 0;
 }
 .piedpage__s1__adresse {
-  flex: 0 0 40%;
+  flex: 0 0 30%;
 }
 .piedpage__s1__adresse__coord {
   display: flex;
@@ -529,28 +547,33 @@ footer {
   margin-top: 1rem;
   line-height: 4rem;
 }
-.piedpage__s1__description {
-  flex: 1 0 clamp(250px, 40%, 400px);
+.piedpage__s1__image {
+  flex: 1 0 clamp(200px, 30%, 300px);
 }
-.piedpage__s2 {
+.piedpage__s1__image img {
+  width: 100%;
+  height: auto;
+}
+.piedpage__2__description {
+  flex: 1 0 clamp(200px, 30%, 300px);
+}
+.piedpage__s3 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
-.piedpage__s2__principal .menu {
+.piedpage__s3__principal .menu {
   flex-direction: row;
+  margin: 0;
   padding-left: 0;
   column-gap: 0.5rem;
 }
-.piedpage__s2__principal .menu a {
+.piedpage__s3__principal .menu a {
   margin-left: 0;
 }
-.piedpage__s3 {
+.piedpage__s3__sociaux {
   width: fit-content;
-  margin: 1rem auto;
-}
-.piedpage__s3__image img {
-  max-width: 30vw;
+  flex-shrink: 0;
 }
 
 .categorie__entete {

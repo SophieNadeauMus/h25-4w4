@@ -28,25 +28,25 @@
           <?php get_search_form(); ?>
         </div>
       </div>
-      <div class="piedpage__s1__description">
+      <div class="piedpage__s1__image">
+        <img src="<?= esc_url($footer_image); ?>" alt="<?= esc_attr__('Image du footer', 'theme_4w4'); ?>">
+      </div>
+    </section>
+    <section class="piedpage__s2">
+      <div class="piedpage__s2__description">
         <h5>Mission du club</h5>
         <p><?= $footer_mission; ?></p>
       </div>
     </section>
-    <section class="piedpage__s2">
-      <div class="piedpage__s2__principal">
+    <section class="piedpage__s3">
+      <div class="piedpage__s3__principal">
         <?php wp_nav_menu(array(
           "menu" => "principal",
           "container" => "nav",
         )); ?>
       </div>
-      <div class="piedpage__s2__sociaux">
-        <?php get_template_part('gabarits/icone-sociaux'); ?>
-      </div>
-    </section>
-    <section class="piedpage__s3">
-      <div class="piedpage__s3__image">
-        <img src="<?= esc_url($footer_image); ?>" alt="<?= esc_attr__('Image du footer', 'theme_4w4'); ?>">
+      <div class="piedpage__s3__sociaux">
+        <?php generer_icones_sociaux(); ?>
       </div>
     </section>
   </div>

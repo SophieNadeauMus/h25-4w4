@@ -4,6 +4,10 @@
 
 footer {
   padding: clamp(1rem, 5%, 2rem);
+
+  & h5 {
+    margin-top: 0;
+  }
 }
 
 .piedpage{
@@ -30,7 +34,7 @@ footer {
       }
     }
     &__adresse{
-      flex: 0 0 40%;
+      flex: 0 0 30%;
 
       &__coord {
         display: flex;
@@ -47,19 +51,35 @@ footer {
         line-height: 4rem;
       }
     }
-    &__description {
-      flex: 1 0 clamp(250px, 40%, 400px);
+
+    &__image {
+      flex: 1 0 clamp(200px, 30%, 300px);
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
-  &__s2 {
+
+  &__2 {
+
+    &__description {
+      flex: 1 0 clamp(200px, 30%, 300px);
+    }
+  }
+
+  &__s3 {
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
     &__principal {
 
       & .menu {
         flex-direction: row;
+        margin: 0;
         padding-left: 0;
         column-gap: 0.5rem;
         a{
@@ -67,14 +87,10 @@ footer {
         }
       }
     }
-  }
 
-  &__s3 {
-    width: fit-content;
-    margin: 1rem auto;
-
-    &__image img {
-      max-width: 30vw;
+    &__sociaux {
+      width: fit-content;
+      flex-shrink: 0;
     }
   }
 }

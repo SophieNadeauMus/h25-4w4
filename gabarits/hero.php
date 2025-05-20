@@ -58,7 +58,7 @@
       </p>
       <p class="hero__auteur">Auteur : <?= $hero_auteur; ?></p>
       <div class="hero__icone">
-        <?php get_template_part('gabarits/icone-sociaux'); ?>
+        <?php generer_icones_sociaux(); ?>
       </div>
     </div>
   </div>
