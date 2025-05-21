@@ -39,7 +39,7 @@
    * @param string||null $cat_a_retirer Le slug de la catégorie à retirer 
    * @return array La liste des catégories restantes
    */
-  function categorie_par_destination($cat_a_retirer = null) {
+  function categorie_par_destination() {
     $categories = get_the_category();
     $categories_filtrees = array();
     $categorie_en_cours = is_category() ? get_queried_object()->slug : null;
@@ -59,12 +59,64 @@
   }
 
   /**
+   * Permet de récupérer les destinations pour l'image du footer
+   */
+  function recuperer_destinations() {
+    $choix_destinations = array();
+
+    // Récupérer tous les articles de la catégorie "destination"
+    $destination_query_args = array(
+        'category_name' => 'destination',
+        'posts_per_page' => -1,
+        'post_status' => 'publish'
+    );
+
+    $destination_posts = get_posts($destination_query_args);
+
+    // Ajouter chaque article dans le tableau des choix (titre de l'article => ID de l'article)
+    foreach ($destination_posts as $post) {
+        $choix_destinations[$post->ID] = $post->post_title;
+    }
+
+    return $choix_destinations;
+  }
+
+  function afficher_image_footer() {
+    $destination_id = get_theme_mod('footer_destination');
+
+    if ($destination_id) {
+      // Récupérer le titre de l'article
+      $destination_titre = get_the_title($destination_id);
+
+      // Récupérer l'URL de l'image à la une
+      $image_url = get_the_post_thumbnail_url($destination_id, 'full');
+
+      // Ajouter une image par défaut si aucune image en vedette n'est définie
+      if (!$image_url) {
+          $image_url = get_template_directory_uri() . '/images/default.png'; // Image par défaut
+      }
+
+      // URL de l'article sélectionné
+      $destination_url = get_permalink($destination_id);
+
+      // Afficher l'image avec le lien
+      ?>
+      <div class="piedpage__s1__image">
+        <h5>Destination: <?php echo esc_html($destination_titre); ?></h5>
+        <a href="<?= esc_url($destination_url); ?>" target="_blank">
+          <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($destination_titre); ?>">
+        </a>
+      </div>
+      <?php
+    }
+}
+
+
+  /**
    * Génère la liste des icones sociaux
-   * À COMPLÉTER
    */
   function generer_icones_sociaux() {
     $nombre_icones = get_theme_mod('sociaux_icones_nombre');
-    $couleur = get_theme_mod('sociaux_icones_couleur');
     
     if($nombre_icones <= 0) {
       return;
@@ -80,7 +132,7 @@
         $svg_url = "https://s2.svgbox.net/social.svg?ic=" . esc_attr($icone_nom);
 
         echo '<a href="' . esc_url($icone_lien) . '" target="_blank" rel="noopener noreferrer">';
-        echo '<img src="' . esc_url($svg_url) . '" alt="' . esc_attr($icone_nom) . '" style= fill:' . esc_attr($couleur) . ';>';
+        echo '<img src="' . esc_url($svg_url) . '" alt="' . esc_attr($icone_nom) . '">';
         echo '</a>';
       }
     }

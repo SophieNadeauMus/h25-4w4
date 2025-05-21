@@ -4,7 +4,6 @@
   $coord_adresse = get_theme_mod('coord_adresse', ''); 
   $coord_telephone = get_theme_mod('coord_telephone', '');
   $coord_courriel = get_theme_mod('coord_courriel', '');
-  $footer_image = get_theme_mod('footer_image', '');
 ?>
 <?php genere_vague($footer_couleur); ?> 
 <footer style="background-color:<?= $footer_couleur ?>">
@@ -28,9 +27,7 @@
           <?php get_search_form(); ?>
         </div>
       </div>
-      <div class="piedpage__s1__image">
-        <img src="<?= esc_url($footer_image); ?>" alt="<?= esc_attr__('Image du footer', 'theme_4w4'); ?>">
-      </div>
+      <?php afficher_image_footer(); ?>
     </section>
     <section class="piedpage__s2">
       <div class="piedpage__s2__description">

@@ -24,7 +24,7 @@
     margin-bottom: 2rem;
     padding: 0.8rem;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba($couleur__primaire, 0.2);
   }
 
   &__btn {
@@ -32,7 +32,7 @@
     border-radius: 5px;
     font-size: clamp(1rem, 3vw, 1.3rem);
     font-weight: bold;
-    color: $couleur__secondaire;
+    color: white;
     text-decoration: none;
     transition: filter 0.2s;
 
@@ -56,11 +56,13 @@
           width: fit-content;
           padding: 0.5rem;
           border-radius: 5px;
+          font-weight: bold;
           background-color: rgba($couleur__primaire, 0.7);
-          transition: background-color 0.2s;
+          transition: all 0.2s;
 
           &:hover {
-            background-color: rgba($couleur__secondaire, 0.7);
+            filter: brightness(0.8);
+            cursor: pointer;
           }
 
           // Pour annuler le style par défaut des menus

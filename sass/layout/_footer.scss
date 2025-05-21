@@ -24,7 +24,7 @@ footer {
     row-gap: 1rem;
 
     &__externe {
-      flex: 0 0 20%;
+      flex: 0 0 30%;
       
       & .menu { // ul menu wp
         display: flex;
@@ -53,11 +53,16 @@ footer {
     }
 
     &__image {
-      flex: 1 0 clamp(200px, 30%, 300px);
+      flex: 1 0 30%;
 
       & img {
         width: 100%;
         height: auto;
+        transition: all 0.2s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
       }
     }
   }

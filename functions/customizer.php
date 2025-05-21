@@ -168,18 +168,18 @@
         'label' => __('Couleur de fond', 'theme_4w4'),
         'section' => 'footer_section',
     )));
-    /////////////////////////////////////////////////// début du champ footer_image
-    // Ajout de l'image dans le footer
-    $wp_customize->add_setting('footer_image', array(
+    /////////////////////////////////////////////////// début du champ footer_destination
+    // Ajout de la destination pour afficher l'image dans le footer
+    $wp_customize->add_setting('footer_destination', array(
       'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'absint'
     ));
-    // Ajout du contrôle de l'image dans le footer
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image', array(
-        'label' => __('Image du footer', 'theme_4w4'),
-        'section' => 'footer_section',
-    )));
-
+    $wp_customize->add_control('footer_destination', array(
+      'label' => __('Sélectionner une destination', 'theme_4w4'),
+      'section' => 'footer_section',
+      'type' => 'select',
+      'choices' => recuperer_destinations(),
+    ));
     //////////////////////////////////////////////////// DÉBUT DE LA ZONE DES ICONES SOCIAUX
     $wp_customize->add_section('sociaux_section', array(
       'title' => __('Icônes sociaux', 'theme_4w4'),

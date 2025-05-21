@@ -523,7 +523,7 @@ footer h5 {
   row-gap: 1rem;
 }
 .piedpage__s1__externe {
-  flex: 0 0 20%;
+  flex: 0 0 30%;
 }
 .piedpage__s1__externe .menu {
   display: flex;
@@ -548,11 +548,15 @@ footer h5 {
   line-height: 4rem;
 }
 .piedpage__s1__image {
-  flex: 1 0 clamp(200px, 30%, 300px);
+  flex: 1 0 30%;
 }
 .piedpage__s1__image img {
   width: 100%;
   height: auto;
+  transition: all 0.2s;
+}
+.piedpage__s1__image img:hover {
+  filter: brightness(0.8);
 }
 .piedpage__2__description {
   flex: 1 0 clamp(200px, 30%, 300px);
@@ -646,14 +650,14 @@ footer h5 {
   margin-bottom: 2rem;
   padding: 0.8rem;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(223, 253, 255, 0.2);
 }
 .erreur__btn {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: clamp(1rem, 3vw, 1.3rem);
   font-weight: bold;
-  color: #58c0c9;
+  color: white;
   text-decoration: none;
   transition: filter 0.2s;
 }
@@ -674,11 +678,13 @@ footer h5 {
   width: fit-content;
   padding: 0.5rem;
   border-radius: 5px;
+  font-weight: bold;
   background-color: rgba(223, 253, 255, 0.7);
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 .erreur__nav .menu li a:hover {
-  background-color: rgba(88, 192, 201, 0.7);
+  filter: brightness(0.8);
+  cursor: pointer;
 }
 .erreur__nav .menu li a::before {
   visibility: hidden;

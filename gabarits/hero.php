@@ -57,9 +57,7 @@
       <?= $coord_telephone; ?>
       </p>
       <p class="hero__auteur">Auteur : <?= $hero_auteur; ?></p>
-      <div class="hero__icone">
-        <?php generer_icones_sociaux(); ?>
-      </div>
+      <?php generer_icones_sociaux(); ?>
     </div>
   </div>
 </section>
