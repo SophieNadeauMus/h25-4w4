@@ -93,7 +93,7 @@
 
       // Ajouter une image par défaut si aucune image en vedette n'est définie
       if (!$image_url) {
-          $image_url = get_template_directory_uri() . '/images/default.png'; // Image par défaut
+          $image_url = get_template_directory_uri() . '/images/default.jpg'; // Image par défaut
       }
 
       // URL de l'article sélectionné

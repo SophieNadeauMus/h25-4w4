@@ -12,8 +12,8 @@
       if (has_post_thumbnail()) {
       the_post_thumbnail('thumbnail'); }
       else {
-        $default_image_url = get_template_directory_uri() . '/images/default.png';
-        echo '<img src="' . $default_image_url . '" alt="Image de voyage" style="width: 150px; height: 150px;" />';
+        $default_image_url = get_template_directory_uri() . '/images/default.jpg';
+        echo '<img src="' . $default_image_url . '" alt="Image de voyage" />';
       } 
     ?>
     <h4 class="carte__titre">

@@ -72,16 +72,23 @@
   }
 
   &__titre {
-    font-size: clamp(2rem, 5vw + 1rem, 4rem);
-    text-shadow: 2px 2px 5px $couleur__tertiaire;
+    font-size: clamp(4rem, 5vw + 1rem, 6rem);
+    width: fit-content;
+    mix-blend-mode: overlay;
   }
 
   &__description {
     width: clamp(15rem, 50vw + 1rem, 45rem);
+    background-color: rgba($couleur__accent, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba($couleur__accent, 0.4);
   }
 
   &__coord {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
     justify-content: space-between;
     align-items: center;
     

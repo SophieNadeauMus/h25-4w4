@@ -8,7 +8,7 @@
               if (has_post_thumbnail()) {
               the_post_thumbnail('large'); } 
               else {
-                $default_image_url = get_template_directory_uri() . '/images/default.png';
+                $default_image_url = get_template_directory_uri() . '/images/default.jpg';
                 echo '<img src="' . $default_image_url . '" alt="Image de voyage"" />';
               }
             ?>
