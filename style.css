@@ -614,13 +614,15 @@ footer h5 {
   border-radius: 5px;
   margin: 1rem auto;
   padding: 0.5rem;
+  box-shadow: 0 7px 7px -5px rgba(72, 161, 169, 0.3);
 }
 .recherche__section article h5 a {
   color: #48a1a9;
   text-decoration: none;
+  transition: color 0.2s;
 }
 .recherche__section article h5 a:hover {
-  text-decoration: underline;
+  color: #58c0c9;
 }
 .recherche__section article hr {
   border: none;

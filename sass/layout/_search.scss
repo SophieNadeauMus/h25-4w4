@@ -9,13 +9,16 @@
     border-radius: 5px;
     margin: 1rem auto;
     padding: 0.5rem;
+    box-shadow: 0 7px 7px -5px rgba($couleur__tertiaire, 0.3);
 
     h5 {
       a{
         color: $couleur__tertiaire;
         text-decoration: none;
+        transition: color 0.2s;
+
         &:hover {
-          text-decoration: underline;
+          color: $couleur__secondaire;
         }
       }   
     }
