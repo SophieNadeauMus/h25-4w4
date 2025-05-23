@@ -16,6 +16,19 @@
     & p {
       margin-bottom: 2rem;
     }
+
+    &__evt {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 1rem;
+      margin: 1rem auto 0 auto;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
   }
 
   &__liste {

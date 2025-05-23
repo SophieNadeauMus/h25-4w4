@@ -342,6 +342,17 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 .pays__intro p {
   margin-bottom: 2rem;
 }
+.pays__intro__evt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  margin: 1rem auto 0 auto;
+}
+.pays__intro__evt h3 {
+  font-size: 1rem;
+}
 .pays__liste {
   display: flex;
   flex-direction: column;

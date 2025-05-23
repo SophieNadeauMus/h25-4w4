@@ -9,6 +9,13 @@
     <div class="pays__intro__contenu">
       <h1><?php the_title(); ?></h1>
       <p> <?php the_content(); ?></p>
+      <div class="pays__intro__evt">
+        <h2>Événement à venir : </h2>
+        <p><?php the_field('date_evt'); ?></p>
+        <p><?php the_field('heure_evt'); ?></p>
+        <p><?php the_field('conferencier_evt'); ?></p>
+        <p><?php the_field('coord_evt'); ?></p>
+      </div>
     </div>
   </div>
   <div class="pays__vague">
