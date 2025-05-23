@@ -320,18 +320,34 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   position: relative;
 }
 
+.pays {
+  margin: 1rem auto;
+}
 .pays__intro {
-  background-color: #F5F5DB;
+  background-color: bisque;
+}
+.pays__intro__contenu {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.pays__intro p {
+  margin-bottom: 2rem;
 }
 .pays__liste {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #dffdff;
+  background-color: #58c0c9;
 }
-.pays__liste__ul {
+.pays__liste__contenu {
   width: 60vw;
   margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pays__liste__ul {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -351,6 +367,12 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 }
 .pays__liste__ul__li.active {
   background-color: #edb066;
+}
+.pays__vague__1 {
+  background-color: bisque;
+}
+.pays__vague__2 {
+  background-color: #58c0c9;
 }
 
 /* //////////////////////////////

@@ -1,22 +1,37 @@
 .pays {
+  margin: 1rem auto;
 
   &__intro {
-    background-color: #F5F5DB;
+    background-color: $couleur__accent--clair;
 
+    &__contenu {
+      width: 60vw;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & p {
+      margin-bottom: 2rem;
+    }
   }
 
   &__liste {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: $couleur__primaire;
+    background-color: $couleur__secondaire;
 
-    &__ul {
+    &__contenu {
       width: 60vw;
       margin: 1rem auto;
       display: flex;
       flex-wrap: wrap;
-      
+    }
+
+    &__ul {
+      display: flex;
+      flex-wrap: wrap;
       padding-left: 0;
       gap: 1rem 1.5rem;
 
@@ -37,6 +52,16 @@
           background-color: $couleur__accent;
         }
       }
+    }
+  }
+
+  &__vague {
+
+    &__1 {
+      background-color: $couleur__accent--clair;
+    }
+    &__2 {
+      background-color: $couleur__secondaire;
     }
   }
 }
