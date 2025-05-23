@@ -1,0 +1,41 @@
+.pays {
+  
+
+  &__intro {
+    
+  }
+
+  &__liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1rem auto;
+      width: fit-content;
+      padding-left: 0;
+      gap: 1rem 1.5rem;
+
+      &__li {
+        background-color: $couleur__accent--clair;
+        color: $couleur__texte;
+        list-style: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: all 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(0.8);
+        }
+
+        &.active{
+          background-color: $couleur__accent;
+        }
+      }
+    }
+  }
+}

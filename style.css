@@ -320,6 +320,36 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   position: relative;
 }
 
+.pays__liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pays__liste__ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  width: fit-content;
+  padding-left: 0;
+  gap: 1rem 1.5rem;
+}
+.pays__liste__ul__li {
+  background-color: bisque;
+  color: #25575c;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.pays__liste__ul__li:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+.pays__liste__ul__li.active {
+  background-color: #edb066;
+}
+
 /* //////////////////////////////
 Les layouts
 ////////////////////////////// */

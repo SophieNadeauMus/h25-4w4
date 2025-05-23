@@ -33,6 +33,19 @@
     }
   }
 
+  function pays_liste() {
+    $liste_pays = array(
+      "France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", 
+      "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"
+    );
+
+    echo '<ul class="pays__liste__ul">';
+    foreach ($liste_pays as $pays) {
+      // Afficher le nom de chaque sous-catégorie
+      echo '<li class="pays__liste__ul__li">' . esc_html($pays) . '</li>';
+    }
+  }
+
   /**
    * Filtre les catégories affichées en fonction de la destination
    * 
