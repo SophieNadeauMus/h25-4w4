@@ -1,5 +1,6 @@
 .destination {
-  margin-bottom: 0;
+  margin: 0 auto;
+  width: 80vw;
 
   &__titre{
     text-align: center;
@@ -11,7 +12,7 @@
     &__article{
       background-color: $couleur__primaire;
       height: auto;
-      margin: 1rem;
+      margin: 1rem 0;
       padding: 0.5rem;
       border-radius: 5px;
       box-shadow: 0 7px 7px -5px rgba($couleur__tertiaire, 0.3);

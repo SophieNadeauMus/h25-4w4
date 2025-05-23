@@ -1,5 +1,5 @@
 .pays {
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
 
   &__intro {
     background-color: $couleur__accent--clair;
@@ -7,8 +7,10 @@
     &__contenu {
       width: 60vw;
       margin: 0 auto;
+      padding-top: 2rem;
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
 
     & p {
@@ -56,12 +58,7 @@
   }
 
   &__vague {
-
-    &__1 {
-      background-color: $couleur__accent--clair;
-    }
-    &__2 {
-      background-color: $couleur__secondaire;
-    }
+    background-color: $couleur__accent--clair;
+    fill: $couleur__secondaire;
   }
 }

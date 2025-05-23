@@ -11,8 +11,8 @@
       <p> <?php the_content(); ?></p>
     </div>
   </div>
-  <div class="pays__vague__1">
-    <?php genere_vague('rouge'); ?>
+  <div class="pays__vague">
+    <?php genere_vague(''); ?>
   </div>
   <div class="pays__liste">
     <div class="pays__liste__contenu">
@@ -20,9 +20,6 @@
       <h2 class="pays__liste__titre"></h2>
       <div class="destination__list" data-method=search></div>
     </div>
-  </div>
-  <div class="pays__vague__2">
-    <?php genere_vague('rouge'); ?>
   </div>
 </section>
 <?php get_footer(); ?>

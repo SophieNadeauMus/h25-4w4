@@ -15,7 +15,7 @@
     </div>
   </section>
   <!-- //////////////////////////////////////////////////// section rest-api -->
-  <section class="destination global">
+  <section class="destination">
     <?php categories_liste("destination"); ?>
     <h2 class="destination__titre">Articles de la catégorie <span id="categorie--active"></span></h2>
     <div class="destination__list"></div>

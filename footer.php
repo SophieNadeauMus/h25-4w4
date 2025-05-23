@@ -4,8 +4,13 @@
   $coord_adresse = get_theme_mod('coord_adresse', ''); 
   $coord_telephone = get_theme_mod('coord_telephone', '');
   $coord_courriel = get_theme_mod('coord_courriel', '');
+
+  $templatePays = is_page_template('template-pays.php');
+  $vagueClasse = $templatePays ? 'vague__pays' : 'vague';
 ?>
-<?php genere_vague($footer_couleur); ?> 
+<div class="<?= $vagueClasse; ?>">
+  <?php genere_vague($footer_couleur); ?> 
+</div>
 <footer style="background-color:<?= $footer_couleur ?>">
   <div class="piedpage">
     <section class="piedpage__s1">

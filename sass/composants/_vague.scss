@@ -1,3 +1,8 @@
 .vague {
   position: relative;
+  background-color: transparent;
+
+  &__pays {
+    background-color: $couleur__secondaire;
+  }
 }

@@ -275,7 +275,8 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 }
 
 .destination {
-  margin-bottom: 0;
+  margin: 0 auto;
+  width: 80vw;
 }
 .destination__titre {
   text-align: center;
@@ -284,7 +285,7 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 .destination__list__article {
   background-color: #dffdff;
   height: auto;
-  margin: 1rem;
+  margin: 1rem 0;
   padding: 0.5rem;
   border-radius: 5px;
   box-shadow: 0 7px 7px -5px rgba(72, 161, 169, 0.3);
@@ -318,10 +319,14 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 
 .vague {
   position: relative;
+  background-color: transparent;
+}
+.vague__pays {
+  background-color: #58c0c9;
 }
 
 .pays {
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
 }
 .pays__intro {
   background-color: bisque;
@@ -329,8 +334,10 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 .pays__intro__contenu {
   width: 60vw;
   margin: 0 auto;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .pays__intro p {
   margin-bottom: 2rem;
@@ -368,11 +375,9 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
 .pays__liste__ul__li.active {
   background-color: #edb066;
 }
-.pays__vague__1 {
+.pays__vague {
   background-color: bisque;
-}
-.pays__vague__2 {
-  background-color: #58c0c9;
+  fill: #58c0c9;
 }
 
 /* //////////////////////////////
