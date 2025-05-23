@@ -44,6 +44,7 @@
       // Afficher le nom de chaque sous-catégorie
       echo '<li class="pays__liste__ul__li">' . esc_html($pays) . '</li>';
     }
+    echo '</ul>';
   }
 
   /**

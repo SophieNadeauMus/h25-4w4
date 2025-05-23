@@ -1,21 +1,22 @@
 .pays {
-  
 
   &__intro {
-    
+    background-color: #F5F5DB;
+
   }
 
   &__liste {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    background-color: $couleur__primaire;
 
     &__ul {
+      width: 60vw;
+      margin: 1rem auto;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      margin: 1rem auto;
-      width: fit-content;
+      
       padding-left: 0;
       gap: 1rem 1.5rem;
 

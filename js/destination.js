@@ -1,18 +1,21 @@
 /*
 * Script js permettant d'extraire les destinations de voyage
+* par pays et par catégorie
 */
 (function(){
     const domaine = document.querySelector('base').href;
-    parcourir_boutons();
+
+    parcourir_boutons_categories();
+    parcourir_boutons_pays();
 
     // Fonction pour parcourir les boutons de catégorie
-    function parcourir_boutons() {
-        const categorie__ul__li = document.querySelectorAll('.categorie__ul__li');
+    function parcourir_boutons_categories() {
+        const btnsCategories = document.querySelectorAll('.categorie__ul__li');
        
-        categorie__ul__li.forEach(elm => {
+        btnsCategories.forEach(elm => {
             elm.addEventListener('click', function() {
                 // Supprimer la classe active de tous les boutons
-                categorie__ul__li.forEach(elm => elm.classList.remove('active'));
+                btnsCategories.forEach(elm => elm.classList.remove('active'));
                 
                 elm.classList.add('active'); // Ajouter la classe active au bouton cliqué
                 
@@ -30,11 +33,33 @@
         });
 
         // Charger la première catégorie par défaut
-        const categoryIdParDefaut = categorie__ul__li[0].dataset.category_id;
-        const categoryBtnDefaut = document.querySelector(`.categorie__ul__li[data-category_id="${categoryIdParDefaut}"]`);
+        if (btnsCategories.length > 0) {
+            btnsCategories[0].click();
+        }
+    }
 
-        if (categoryBtnDefaut) {
-            categoryBtnDefaut.click();
+    function parcourir_boutons_pays() {
+        const btnsPays = document.querySelectorAll('.pays__liste__ul__li');
+
+        btnsPays.forEach(elm => {
+            elm.addEventListener('click', function() {
+                btnsPays.forEach(elm => elm.classList.remove('active'));
+                elm.classList.add('active');
+
+                const pays = elm.innerText.trim();
+
+                const apiUrl = `${domaine}wp-json/wp/v2/posts?search=${pays}`;
+                parcourir_articles(apiUrl);
+                console.log("Pays sélectionné:", pays, "API URL:", apiUrl);
+
+
+                document.querySelector('.pays__liste__titre').innerHTML = elm.innerText;
+            });
+        });
+
+        // Charger le pays par défaut
+        if (btnsPays.length > 0) {
+            btnsPays[0].click();
         }
     }
 

@@ -320,17 +320,20 @@ btns-categories.scss //////////////////////////////////////////// .categorie__ul
   position: relative;
 }
 
+.pays__intro {
+  background-color: #F5F5DB;
+}
 .pays__liste {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
+  background-color: #dffdff;
 }
 .pays__liste__ul {
+  width: 60vw;
+  margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 1rem auto;
-  width: fit-content;
   padding-left: 0;
   gap: 1rem 1.5rem;
 }
